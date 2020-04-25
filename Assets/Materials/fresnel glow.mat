@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: fresnel glow
-  m_Shader: {fileID: -6465566751694194690, guid: 19d1339007271014fb26f58948c1f0b8,
+  m_Shader: {fileID: -6465566751694194690, guid: ed56de63104490b4e8da043cf4a44aa0,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 2
@@ -66,6 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_624F2357: 5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -88,7 +89,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_B23AA66E: {r: 0, g: 2.4616127, b: 8, a: 0}
+    - Color_B23AA66E: {r: 7.2156863, g: 13.615686, b: 16, a: 0}
+    - Color_D28685CD: {r: 0.18431365, g: 0.39215687, b: 0.7176471, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
