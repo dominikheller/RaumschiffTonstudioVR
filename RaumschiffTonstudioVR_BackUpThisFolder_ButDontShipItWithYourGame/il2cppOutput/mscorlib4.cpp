@@ -30578,6 +30578,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DllNotFoundException__ctor_m814CD75482C2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Boolean System.Double::IsInfinity(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_IsInfinity_mA8AD072AF3544E66AF01F218A035215A67CB5339 (double ___d0, const RuntimeMethod* method)
+{
+	{
+		int64_t L_0 = *((int64_t*)(((uintptr_t)(&___d0))));
+		return (bool)((((int64_t)((int64_t)((int64_t)L_0&(int64_t)((int64_t)(std::numeric_limits<int64_t>::max)())))) == ((int64_t)((int64_t)9218868437227405312LL)))? 1 : 0);
+	}
+}
 // System.Boolean System.Double::IsPositiveInfinity(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Double_IsPositiveInfinity_m45537C58204CD5AA96F39D42F4CB8DADA128C77B (double ___d0, const RuntimeMethod* method)
 {

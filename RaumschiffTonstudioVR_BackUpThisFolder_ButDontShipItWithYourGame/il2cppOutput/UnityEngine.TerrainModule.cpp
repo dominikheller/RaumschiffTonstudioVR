@@ -339,6 +339,8 @@ struct TerrainFilter_t02BF9FBD8E61763D1D8484B34936B36B1046C66B;
 struct GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F;
 // UnityEngine.Object
 struct Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0;
+// UnityEngine.RenderTexture
+struct RenderTexture_tBC47D853E3DA6511CD6C49DBF78D47B890FCD2F6;
 // UnityEngine.Terrain
 struct Terrain_t0BF7371FA90643325F50A87C7894D7BEBBE08943;
 // UnityEngine.TerrainData
@@ -2294,6 +2296,34 @@ public:
 };
 
 
+// UnityEngine.Bounds
+struct  Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 
+{
+public:
+	// UnityEngine.Vector3 UnityEngine.Bounds::m_Center
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___m_Center_0;
+	// UnityEngine.Vector3 UnityEngine.Bounds::m_Extents
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___m_Extents_1;
+
+public:
+	inline static int32_t get_offset_of_m_Center_0() { return static_cast<int32_t>(offsetof(Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890, ___m_Center_0)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_m_Center_0() const { return ___m_Center_0; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_m_Center_0() { return &___m_Center_0; }
+	inline void set_m_Center_0(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	{
+		___m_Center_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Extents_1() { return static_cast<int32_t>(offsetof(Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890, ___m_Extents_1)); }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  get_m_Extents_1() const { return ___m_Extents_1; }
+	inline Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * get_address_of_m_Extents_1() { return &___m_Extents_1; }
+	inline void set_m_Extents_1(Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  value)
+	{
+		___m_Extents_1 = value;
+	}
+};
+
+
 // UnityEngine.Experimental.TerrainAPI.TerrainUtility_TerrainMap_ErrorCode
 struct  ErrorCode_tCC2BF2B1CF6C6645A76C1DEE65D4AA4A527FEC7A 
 {
@@ -2882,6 +2912,31 @@ public:
 };
 
 
+// UnityEngine.Texture
+struct  Texture_t387FE83BB848001FD06B14707AEA6D5A0F6A95F4  : public Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0
+{
+public:
+
+public:
+};
+
+struct Texture_t387FE83BB848001FD06B14707AEA6D5A0F6A95F4_StaticFields
+{
+public:
+	// System.Int32 UnityEngine.Texture::GenerateAllMips
+	int32_t ___GenerateAllMips_4;
+
+public:
+	inline static int32_t get_offset_of_GenerateAllMips_4() { return static_cast<int32_t>(offsetof(Texture_t387FE83BB848001FD06B14707AEA6D5A0F6A95F4_StaticFields, ___GenerateAllMips_4)); }
+	inline int32_t get_GenerateAllMips_4() const { return ___GenerateAllMips_4; }
+	inline int32_t* get_address_of_GenerateAllMips_4() { return &___GenerateAllMips_4; }
+	inline void set_GenerateAllMips_4(int32_t value)
+	{
+		___GenerateAllMips_4 = value;
+	}
+};
+
+
 // System.ArgumentException
 struct  ArgumentException_tEDCD16F20A09ECE461C3DA766C16EDA8864057D1  : public SystemException_t5380468142AA850BE4A341D7AF3EAB9C78746782
 {
@@ -2939,6 +2994,15 @@ public:
 
 // UnityEngine.Experimental.TerrainAPI.TerrainUtility_TerrainMap_TerrainFilter
 struct  TerrainFilter_t02BF9FBD8E61763D1D8484B34936B36B1046C66B  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+
+// UnityEngine.RenderTexture
+struct  RenderTexture_tBC47D853E3DA6511CD6C49DBF78D47B890FCD2F6  : public Texture_t387FE83BB848001FD06B14707AEA6D5A0F6A95F4
 {
 public:
 
@@ -3451,8 +3515,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_m091EBAEBC7919B0391ABDAFB73
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_Internal_Create_m02C792919F391601D1EE4CF6DF70182FBD646F16 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * ___terrainData0, const RuntimeMethod* method);
 // System.Int32 UnityEngine.TerrainData::get_internalHeightmapResolution()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TerrainData_get_internalHeightmapResolution_m9E1957682C61B2074E46987C562CFA05C067AEAA (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.TerrainData::get_heightmapScale_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_heightmapScale_Injected_m27136A97FDCB99899F4F1869C438CAAED02519D7 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.TerrainData::get_size_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_size_Injected_mF6DEEE266FBF9CEC3AF2B6B77593B9704B299A68 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret0, const RuntimeMethod* method);
+// System.Void UnityEngine.TerrainData::get_bounds_Injected(UnityEngine.Bounds&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_bounds_Injected_m4A4F6423A457846F5F343A76143D2D520B40F3D3 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 * ___ret0, const RuntimeMethod* method);
 // System.Int32 UnityEngine.TerrainData::get_heightmapResolution()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TerrainData_get_heightmapResolution_m9C794229E7809F6194ADFC4B5B6AB6990F8F3178 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method);
 // System.Void System.ArgumentException::.ctor(System.String)
@@ -5965,6 +6033,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_Internal_Create_m02C792919F3
 	_il2cpp_icall_func = (TerrainData_Internal_Create_m02C792919F391601D1EE4CF6DF70182FBD646F16_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TerrainData::Internal_Create(UnityEngine.TerrainData)");
 	_il2cpp_icall_func(___terrainData0);
 }
+// UnityEngine.RenderTexture UnityEngine.TerrainData::get_heightmapTexture()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTexture_tBC47D853E3DA6511CD6C49DBF78D47B890FCD2F6 * TerrainData_get_heightmapTexture_m1A59720087EEDD2FE906987C99E2C09E2DAA10E9 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method)
+{
+	typedef RenderTexture_tBC47D853E3DA6511CD6C49DBF78D47B890FCD2F6 * (*TerrainData_get_heightmapTexture_m1A59720087EEDD2FE906987C99E2C09E2DAA10E9_ftn) (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 *);
+	static TerrainData_get_heightmapTexture_m1A59720087EEDD2FE906987C99E2C09E2DAA10E9_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (TerrainData_get_heightmapTexture_m1A59720087EEDD2FE906987C99E2C09E2DAA10E9_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TerrainData::get_heightmapTexture()");
+	RenderTexture_tBC47D853E3DA6511CD6C49DBF78D47B890FCD2F6 * retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
 // System.Int32 UnityEngine.TerrainData::get_heightmapResolution()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TerrainData_get_heightmapResolution_m9C794229E7809F6194ADFC4B5B6AB6990F8F3178 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method)
 {
@@ -5991,6 +6069,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TerrainData_get_internalHeightmapReso
 	int32_t retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// UnityEngine.Vector3 UnityEngine.TerrainData::get_heightmapScale()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  TerrainData_get_heightmapScale_mD733445645F81394B91FD8CC623272E955C13ED7 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method)
+{
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		TerrainData_get_heightmapScale_Injected_m27136A97FDCB99899F4F1869C438CAAED02519D7(__this, (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_0), /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = V_0;
+		return L_0;
+	}
+}
 // UnityEngine.Vector3 UnityEngine.TerrainData::get_size()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  TerrainData_get_size_m0987D18D442D824D5F9CF1CF5B42CCF1A6A42D51 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method)
 {
@@ -5999,6 +6088,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E
 	{
 		TerrainData_get_size_Injected_mF6DEEE266FBF9CEC3AF2B6B77593B9704B299A68(__this, (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_0), /*hidden argument*/NULL);
 		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = V_0;
+		return L_0;
+	}
+}
+// UnityEngine.Bounds UnityEngine.TerrainData::get_bounds()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890  TerrainData_get_bounds_m5646077A88FA64FC03791AB4849E57ACA5B18D65 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, const RuntimeMethod* method)
+{
+	Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		TerrainData_get_bounds_Injected_m4A4F6423A457846F5F343A76143D2D520B40F3D3(__this, (Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 *)(&V_0), /*hidden argument*/NULL);
+		Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890  L_0 = V_0;
 		return L_0;
 	}
 }
@@ -6195,6 +6295,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData__cctor_mB579F93C53A8F85C72D7
 		return;
 	}
 }
+// System.Void UnityEngine.TerrainData::get_heightmapScale_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_heightmapScale_Injected_m27136A97FDCB99899F4F1869C438CAAED02519D7 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*TerrainData_get_heightmapScale_Injected_m27136A97FDCB99899F4F1869C438CAAED02519D7_ftn) (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 *, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *);
+	static TerrainData_get_heightmapScale_Injected_m27136A97FDCB99899F4F1869C438CAAED02519D7_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (TerrainData_get_heightmapScale_Injected_m27136A97FDCB99899F4F1869C438CAAED02519D7_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TerrainData::get_heightmapScale_Injected(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___ret0);
+}
 // System.Void UnityEngine.TerrainData::get_size_Injected(UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_size_Injected_mF6DEEE266FBF9CEC3AF2B6B77593B9704B299A68 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret0, const RuntimeMethod* method)
 {
@@ -6202,6 +6311,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_size_Injected_mF6DEEE266
 	static TerrainData_get_size_Injected_mF6DEEE266FBF9CEC3AF2B6B77593B9704B299A68_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (TerrainData_get_size_Injected_mF6DEEE266FBF9CEC3AF2B6B77593B9704B299A68_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TerrainData::get_size_Injected(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___ret0);
+}
+// System.Void UnityEngine.TerrainData::get_bounds_Injected(UnityEngine.Bounds&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TerrainData_get_bounds_Injected_m4A4F6423A457846F5F343A76143D2D520B40F3D3 (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 * __this, Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*TerrainData_get_bounds_Injected_m4A4F6423A457846F5F343A76143D2D520B40F3D3_ftn) (TerrainData_t9D44396901570930AFE428DAC19ABE0C1477CFE2 *, Bounds_tA2716F5212749C61B0E7B7B77E0CD3D79B742890 *);
+	static TerrainData_get_bounds_Injected_m4A4F6423A457846F5F343A76143D2D520B40F3D3_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (TerrainData_get_bounds_Injected_m4A4F6423A457846F5F343A76143D2D520B40F3D3_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TerrainData::get_bounds_Injected(UnityEngine.Bounds&)");
 	_il2cpp_icall_func(__this, ___ret0);
 }
 #ifdef __clang__

@@ -1117,6 +1117,8 @@ IL2CPP_EXTERN_C const uint32_t Math_AbsHelper_mBB53E92A37FF9A4AD65D354BBAC103F93
 IL2CPP_EXTERN_C const uint32_t Math_Abs_m7F5374AE27F11C3FFBB648DA0EE075317C37C097_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Math_InternalTruncate_mAE5DE69F993E1DF43433F66135A2A80CEF0AC7C2_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Math_Log_m5C457D6A666677B3E260C571049528D5BE93B7AF_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t Math_Max_mBC1E4E7E10DF950E160FB4E2367AAE4B2158F351_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t Math_Min_m18EB8E9F2EBAF3ACB521CDB9BBC4E358103F3075_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Math_Truncate_m44E272770DC7ED9901329E1FC8D0D1F0731C9011_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Math__cctor_m74DAC117CAF47A5126D22880C729D8B4991DC62E_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MemberAccessException__ctor_mDD27777FCB5B591E3A785846CB00EC52CBDEA4D7_MetadataUsageId;
@@ -29804,6 +29806,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Math_Abs_mF0B5B265075406BE063F1D0E561DC
 {
 	return fabsf(___value0);
 }
+// System.Double System.Math::Abs(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Abs_m7994C39FCBDC03DD2858BD906A2535BE997AE2B1 (double ___value0)
+{
+	return fabs(___value0);
+}
 // System.Int32 System.Math::Max(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Max_mA99E48BB021F2E4B62D4EA9F52EA6928EED618A2 (int32_t ___val10, int32_t ___val21, const RuntimeMethod* method)
 {
@@ -29823,6 +29830,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Max_mA99E48BB021F2E4B62D4EA9F52E
 IL_0006:
 	{
 		int32_t L_3 = ___val10;
+		return L_3;
+	}
+}
+// System.UInt32 System.Math::Max(System.UInt32,System.UInt32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t Math_Max_m2CC37D12571BFADB2BF042702B0DA1A6537E2F83 (uint32_t ___val10, uint32_t ___val21, const RuntimeMethod* method)
+{
+	{
+		uint32_t L_0 = ___val10;
+		uint32_t L_1 = ___val21;
+		if ((!(((uint32_t)L_0) < ((uint32_t)L_1))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		uint32_t L_2 = ___val21;
+		return L_2;
+	}
+
+IL_0006:
+	{
+		uint32_t L_3 = ___val10;
 		return L_3;
 	}
 }
@@ -29881,6 +29910,49 @@ IL_0006:
 IL_0010:
 	{
 		float L_6 = ___val21;
+		return L_6;
+	}
+}
+// System.Double System.Math::Max(System.Double,System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Max_mBC1E4E7E10DF950E160FB4E2367AAE4B2158F351 (double ___val10, double ___val21, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Math_Max_mBC1E4E7E10DF950E160FB4E2367AAE4B2158F351_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		double L_0 = ___val10;
+		double L_1 = ___val21;
+		if ((!(((double)L_0) > ((double)L_1))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		double L_2 = ___val10;
+		return L_2;
+	}
+
+IL_0006:
+	{
+		double L_3 = ___val10;
+		IL2CPP_RUNTIME_CLASS_INIT(Double_t358B8F23BDC52A5DD700E727E204F9F7CDE12409_il2cpp_TypeInfo_var);
+		bool L_4 = Double_IsNaN_m5DFBBD58036879B687FEC248C50EACBABE205AB3(L_3, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		double L_5 = ___val10;
+		return L_5;
+	}
+
+IL_0010:
+	{
+		double L_6 = ___val21;
 		return L_6;
 	}
 }
@@ -29961,6 +30033,49 @@ IL_0006:
 IL_0010:
 	{
 		float L_6 = ___val21;
+		return L_6;
+	}
+}
+// System.Double System.Math::Min(System.Double,System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Min_m18EB8E9F2EBAF3ACB521CDB9BBC4E358103F3075 (double ___val10, double ___val21, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Math_Min_m18EB8E9F2EBAF3ACB521CDB9BBC4E358103F3075_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		double L_0 = ___val10;
+		double L_1 = ___val21;
+		if ((!(((double)L_0) < ((double)L_1))))
+		{
+			goto IL_0006;
+		}
+	}
+	{
+		double L_2 = ___val10;
+		return L_2;
+	}
+
+IL_0006:
+	{
+		double L_3 = ___val10;
+		IL2CPP_RUNTIME_CLASS_INIT(Double_t358B8F23BDC52A5DD700E727E204F9F7CDE12409_il2cpp_TypeInfo_var);
+		bool L_4 = Double_IsNaN_m5DFBBD58036879B687FEC248C50EACBABE205AB3(L_3, /*hidden argument*/NULL);
+		if (!L_4)
+		{
+			goto IL_0010;
+		}
+	}
+	{
+		double L_5 = ___val10;
+		return L_5;
+	}
+
+IL_0010:
+	{
+		double L_6 = ___val21;
 		return L_6;
 	}
 }

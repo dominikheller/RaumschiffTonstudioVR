@@ -272,6 +272,8 @@ struct U3CReadyStateCoroutineU3Ed__52_tAD7241E4EFA17C0FAC2D5103D26F053535D645F9;
 struct U3CTeleportingStateCoroutineU3Ed__80_tAEE068330A187A58CC966AC1DE3CE741BE9820C2;
 // LocomotionTeleport/AimData
 struct AimData_t8922A2054E22AC66C45ADE46E48651B6AD0E5CD3;
+// LookCamera
+struct LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32;
 // MediaPlayerImage
 struct MediaPlayerImage_t1A32A4A7683172E9E09BC0D0A8C36CE68C3AECF9;
 // MouseLook
@@ -1209,6 +1211,8 @@ IL2CPP_EXTERN_C const uint32_t LocomotionTeleport_remove_ExitStateAim_mA4B53F0F1
 IL2CPP_EXTERN_C const uint32_t LocomotionTeleport_remove_Teleported_mAE4565E2A5506E40089E1B4F963DCA7D1ABF07F6_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t LocomotionTeleport_remove_UpdateAimData_mA854E9D423E26F287E4B2EF45D070FA5C06BA09F_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t LocomotionTeleport_remove_UpdateTeleportDestination_m8ADC249C52A5ABAB176209D1A1A264AACE69CBA7_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t LookCamera_Start_m79E5A31C6451BB26F946CD16B6B51D0F48D52A10_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t LookCamera_Update_mB460F6B1DF34F7A5405C16DC0F945547D7314A42_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MediaPlayerImage_OnPopulateMesh_m751A710687D895ADB0084B506CC345A9B2B65200_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MediaPlayerImage__ctor_m0535EB8CB4E01384BDAA714BAE2DB59BC4203A70_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MouseLook_Start_mEEA4981192190CE14347F5C3CEC2E533956F8F23_MetadataUsageId;
@@ -14404,6 +14408,64 @@ public:
 };
 
 
+// LookCamera
+struct  LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
+{
+public:
+	// System.Single LookCamera::speedNormal
+	float ___speedNormal_4;
+	// System.Single LookCamera::speedFast
+	float ___speedFast_5;
+	// System.Single LookCamera::mouseSensitivityX
+	float ___mouseSensitivityX_6;
+	// System.Single LookCamera::mouseSensitivityY
+	float ___mouseSensitivityY_7;
+	// System.Single LookCamera::rotY
+	float ___rotY_8;
+
+public:
+	inline static int32_t get_offset_of_speedNormal_4() { return static_cast<int32_t>(offsetof(LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32, ___speedNormal_4)); }
+	inline float get_speedNormal_4() const { return ___speedNormal_4; }
+	inline float* get_address_of_speedNormal_4() { return &___speedNormal_4; }
+	inline void set_speedNormal_4(float value)
+	{
+		___speedNormal_4 = value;
+	}
+
+	inline static int32_t get_offset_of_speedFast_5() { return static_cast<int32_t>(offsetof(LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32, ___speedFast_5)); }
+	inline float get_speedFast_5() const { return ___speedFast_5; }
+	inline float* get_address_of_speedFast_5() { return &___speedFast_5; }
+	inline void set_speedFast_5(float value)
+	{
+		___speedFast_5 = value;
+	}
+
+	inline static int32_t get_offset_of_mouseSensitivityX_6() { return static_cast<int32_t>(offsetof(LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32, ___mouseSensitivityX_6)); }
+	inline float get_mouseSensitivityX_6() const { return ___mouseSensitivityX_6; }
+	inline float* get_address_of_mouseSensitivityX_6() { return &___mouseSensitivityX_6; }
+	inline void set_mouseSensitivityX_6(float value)
+	{
+		___mouseSensitivityX_6 = value;
+	}
+
+	inline static int32_t get_offset_of_mouseSensitivityY_7() { return static_cast<int32_t>(offsetof(LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32, ___mouseSensitivityY_7)); }
+	inline float get_mouseSensitivityY_7() const { return ___mouseSensitivityY_7; }
+	inline float* get_address_of_mouseSensitivityY_7() { return &___mouseSensitivityY_7; }
+	inline void set_mouseSensitivityY_7(float value)
+	{
+		___mouseSensitivityY_7 = value;
+	}
+
+	inline static int32_t get_offset_of_rotY_8() { return static_cast<int32_t>(offsetof(LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32, ___rotY_8)); }
+	inline float get_rotY_8() const { return ___rotY_8; }
+	inline float* get_address_of_rotY_8() { return &___rotY_8; }
+	inline void set_rotY_8(float value)
+	{
+		___rotY_8 = value;
+	}
+};
+
+
 // MouseLook
 struct  MouseLook_t09B5CDC09EE6C96861DDED68BF1D46BC3C3D6EC7  : public MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429
 {
@@ -24161,6 +24223,23 @@ inline void List_1_Clear_m8E7A9E8CF891528845C4B071CB8166DDB1A384B8 (List_1_tFCCB
 {
 	((  void (*) (List_1_tFCCBEDAA56D8F7598520FB136A9F8D713033D6B5 *, const RuntimeMethod*))List_1_Clear_m8E7A9E8CF891528845C4B071CB8166DDB1A384B8_gshared)(__this, method);
 }
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.Rigidbody>()
+inline Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
+{
+	return ((  Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * (*) (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m233A1E6EF90A3BA46CD83BFC568F4E4DB4D93CC9_gshared)(__this, method);
+}
+// System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_freezeRotation_m946DD8BB0A2AD6F8C5CA22F506628168A3767D13 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, bool ___value0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Input::GetMouseButton(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetMouseButton_m43C68DE93C7D990E875BA53C4DEC9CA6230C8B79 (int32_t ___button0, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Transform::get_localEulerAngles()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_localEulerAngles_m445AD7F6706B0BDABA8A875C899EB1E1DF1A2A2B (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
+// System.Single UnityEngine.Input::GetAxis(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Input_GetAxis_m6454498C755B9A2C964875927FB557CA9E75D387 (String_t* ___axisName0, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Mathf_Clamp_m033DD894F89E6DCCDAFC580091053059C86A4507 (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_localEulerAngles(UnityEngine.Vector3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localEulerAngles_mC5E92A989DD8B2E7B854F9D84B528A34AEAA1A17 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___value0, const RuntimeMethod* method);
 // UnityEngine.Rect UnityEngine.UI.Graphic::GetPixelAdjustedRect()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_t35B976DE901B5423C11705E156938EA27AB402CE  Graphic_GetPixelAdjustedRect_m324344D38946D6F976CD487B493B8D9787DE891B (Graphic_tBA2C3EF11D3DAEBB57F6879AB0BB4F8BD40D00D8 * __this, const RuntimeMethod* method);
 // System.Single UnityEngine.Rect::get_x()
@@ -24183,23 +24262,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Mathf_Lerp_m9A74C5A0C37D0CDF45EE66E7774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VertexHelper_AddTriangle_mCC7AD55263B747D7653590BC9220D6369D168AF4 (VertexHelper_t27373EA2CF0F5810EC8CF873D0A6D6C0B23DAC3F * __this, int32_t ___idx00, int32_t ___idx11, int32_t ___idx22, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.Image::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Image__ctor_m89E0D103F4CA0BBBC035607123F6E7C329204765 (Image_t18FED07D8646917E1C563745518CF3DD57FF0B3E * __this, const RuntimeMethod* method);
-// UnityEngine.Vector3 UnityEngine.Transform::get_localEulerAngles()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Transform_get_localEulerAngles_m445AD7F6706B0BDABA8A875C899EB1E1DF1A2A2B (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, const RuntimeMethod* method);
-// System.Single UnityEngine.Input::GetAxis(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Input_GetAxis_m6454498C755B9A2C964875927FB557CA9E75D387 (String_t* ___axisName0, const RuntimeMethod* method);
-// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Mathf_Clamp_m033DD894F89E6DCCDAFC580091053059C86A4507 (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method);
-// System.Void UnityEngine.Transform::set_localEulerAngles(UnityEngine.Vector3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localEulerAngles_mC5E92A989DD8B2E7B854F9D84B528A34AEAA1A17 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::Rotate(System.Single,System.Single,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_Rotate_mEEA80F3DA5A4C93611D7165DF54763E578477EF9 (Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * __this, float ___xAngle0, float ___yAngle1, float ___zAngle2, const RuntimeMethod* method);
-// !!0 UnityEngine.Component::GetComponent<UnityEngine.Rigidbody>()
-inline Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
-{
-	return ((  Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * (*) (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m233A1E6EF90A3BA46CD83BFC568F4E4DB4D93CC9_gshared)(__this, method);
-}
-// System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_set_freezeRotation_m946DD8BB0A2AD6F8C5CA22F506628168A3767D13 (Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * __this, bool ___value0, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Renderer>()
 inline Renderer_t0556D67DD582620D1F495627EDE30D03284151F4 * Component_GetComponent_TisRenderer_t0556D67DD582620D1F495627EDE30D03284151F4_m3E0C8F08ADF98436AEF5AE9F4C56A51FF7D0A892 (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method)
 {
@@ -35406,6 +35470,137 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AimData_Reset_m3C00BB21156A3BEE804ABE4FC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void LookCamera::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LookCamera_Start_m79E5A31C6451BB26F946CD16B6B51D0F48D52A10 (LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (LookCamera_Start_m79E5A31C6451BB26F946CD16B6B51D0F48D52A10_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (GetComponent<Rigidbody>())
+		Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * L_0 = Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C(__this, /*hidden argument*/Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C_RuntimeMethod_var);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Implicit_m8B2A44B4B1406ED346D1AE6D962294FD58D0D534(L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0019;
+		}
+	}
+	{
+		// GetComponent<Rigidbody>().freezeRotation = true;
+		Rigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5 * L_2 = Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C(__this, /*hidden argument*/Component_GetComponent_TisRigidbody_tE0A58EE5A1F7DC908EFFB4F0D795AC9552A750A5_m3F58A77E3F62D9C80D7B49BA04E3D4809264FD5C_RuntimeMethod_var);
+		NullCheck(L_2);
+		Rigidbody_set_freezeRotation_m946DD8BB0A2AD6F8C5CA22F506628168A3767D13(L_2, (bool)1, /*hidden argument*/NULL);
+	}
+
+IL_0019:
+	{
+		// }
+		return;
+	}
+}
+// System.Void LookCamera::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LookCamera_Update_mB460F6B1DF34F7A5405C16DC0F945547D7314A42 (LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (LookCamera_Update_mB460F6B1DF34F7A5405C16DC0F945547D7314A42_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	{
+		// if (Input.GetMouseButton(1))
+		bool L_0 = Input_GetMouseButton_m43C68DE93C7D990E875BA53C4DEC9CA6230C8B79(1, /*hidden argument*/NULL);
+		if (!L_0)
+		{
+			goto IL_0081;
+		}
+	}
+	{
+		// float rotX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivityX;
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_1 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_2 = Transform_get_localEulerAngles_m445AD7F6706B0BDABA8A875C899EB1E1DF1A2A2B(L_1, /*hidden argument*/NULL);
+		float L_3 = L_2.get_y_3();
+		float L_4 = Input_GetAxis_m6454498C755B9A2C964875927FB557CA9E75D387(_stringLiteral294D359ECE148A430F19981912277E5154CA19E0, /*hidden argument*/NULL);
+		float L_5 = __this->get_mouseSensitivityX_6();
+		V_0 = ((float)il2cpp_codegen_add((float)L_3, (float)((float)il2cpp_codegen_multiply((float)L_4, (float)L_5))));
+		// rotY += Input.GetAxis("Mouse Y") * mouseSensitivityY;
+		float L_6 = __this->get_rotY_8();
+		float L_7 = Input_GetAxis_m6454498C755B9A2C964875927FB557CA9E75D387(_stringLiteral1E88AB05D76FF253F292B74866D32460BB3836E2, /*hidden argument*/NULL);
+		float L_8 = __this->get_mouseSensitivityY_7();
+		__this->set_rotY_8(((float)il2cpp_codegen_add((float)L_6, (float)((float)il2cpp_codegen_multiply((float)L_7, (float)L_8)))));
+		// rotY = Mathf.Clamp(rotY, -89.5f, 89.5f);
+		float L_9 = __this->get_rotY_8();
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_tFBDE6467D269BFE410605C7D806FD9991D4A89CB_il2cpp_TypeInfo_var);
+		float L_10 = Mathf_Clamp_m033DD894F89E6DCCDAFC580091053059C86A4507(L_9, (-89.5f), (89.5f), /*hidden argument*/NULL);
+		__this->set_rotY_8(L_10);
+		// transform.localEulerAngles = new Vector3(-rotY, rotX, 0.0f);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_11 = Component_get_transform_m00F05BD782F920C301A7EBA480F3B7A904C07EC9(__this, /*hidden argument*/NULL);
+		float L_12 = __this->get_rotY_8();
+		float L_13 = V_0;
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_14;
+		memset((&L_14), 0, sizeof(L_14));
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_14), ((-L_12)), L_13, (0.0f), /*hidden argument*/NULL);
+		NullCheck(L_11);
+		Transform_set_localEulerAngles_mC5E92A989DD8B2E7B854F9D84B528A34AEAA1A17(L_11, L_14, /*hidden argument*/NULL);
+	}
+
+IL_0081:
+	{
+		// if (Input.GetKey(KeyCode.U))
+		bool L_15 = Input_GetKey_m46AA83E14F9C3A75E06FE0A8C55740D47B2DB784(((int32_t)117), /*hidden argument*/NULL);
+		if (!L_15)
+		{
+			goto IL_00ae;
+		}
+	}
+	{
+		// gameObject.transform.localPosition = new Vector3(0.0f, 3500.0f, 0.0f);
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_16 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(__this, /*hidden argument*/NULL);
+		NullCheck(L_16);
+		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_17 = GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C(L_16, /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_18;
+		memset((&L_18), 0, sizeof(L_18));
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_18), (0.0f), (3500.0f), (0.0f), /*hidden argument*/NULL);
+		NullCheck(L_17);
+		Transform_set_localPosition_m275F5550DD939F83AFEB5E8D681131172E2E1728(L_17, L_18, /*hidden argument*/NULL);
+	}
+
+IL_00ae:
+	{
+		// }
+		return;
+	}
+}
+// System.Void LookCamera::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LookCamera__ctor_m6E73A32258FF4A5372D97F255878560896021C95 (LookCamera_tA27393FC4CDD889F8122364FB587381CE83CAD32 * __this, const RuntimeMethod* method)
+{
+	{
+		// public float speedNormal = 10.0f;
+		__this->set_speedNormal_4((10.0f));
+		// public float speedFast   = 50.0f;
+		__this->set_speedFast_5((50.0f));
+		// public float mouseSensitivityX = 5.0f;
+		__this->set_mouseSensitivityX_6((5.0f));
+		// public float mouseSensitivityY = 5.0f;
+		__this->set_mouseSensitivityY_7((5.0f));
+		MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

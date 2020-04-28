@@ -9,6 +9,7 @@
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
 		<type fullname="UnityEngine.Shader" preserve="nothing"/>
 		<type fullname="UnityEditor.AudioManager" preserve="nothing"/>
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
@@ -38,8 +39,12 @@
 		<type fullname="UnityEngine.CapsuleCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.SphereCollider" preserve="nothing"/>
+		<type fullname="UnityEngine.Joint" preserve="nothing"/>
+		<type fullname="UnityEngine.ConfigurableJoint" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffect" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VFXRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
 		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
@@ -51,6 +56,8 @@
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffectAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffectObject" preserve="nothing"/>
 		<type fullname="UnityEngine.LODGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.LightProbeGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
@@ -115,6 +122,10 @@
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.Vignette" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.VisualEffectGraph.Runtime">
+		<type fullname="UnityEngine.VFX.Utility.VFXPositionBinder" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.Utility.VFXPropertyBinder" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="Unity.XR.Management">
 		<type fullname="UnityEngine.XR.Management.XRGeneralSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.Management.XRManagerSettings" preserve="nothing"/>
@@ -143,6 +154,9 @@
 		<type fullname="VRTK.Prefabs.CameraRig.TrackedAlias.TrackedAliasFacade" preserve="nothing"/>
 		<type fullname="VRTK.Prefabs.Helpers.AxisRotator.AxisRotatorConfigurator" preserve="nothing"/>
 		<type fullname="VRTK.Prefabs.Helpers.AxisRotator.AxisRotatorFacade" preserve="nothing"/>
+		<type fullname="VRTK.Prefabs.Interactions.Controllables.ComponentTags.ControllableJointDriveContainerTag" preserve="nothing"/>
+		<type fullname="VRTK.Prefabs.Interactions.Controllables.DirectionalDriveFacade" preserve="nothing"/>
+		<type fullname="VRTK.Prefabs.Interactions.Controllables.DirectionalJointDrive" preserve="nothing"/>
 		<type fullname="VRTK.Prefabs.Interactions.Interactables.Grab.Action.GrabInteractableFollowAction" preserve="nothing"/>
 		<type fullname="VRTK.Prefabs.Interactions.Interactables.Grab.Action.GrabInteractableSwapAction" preserve="nothing"/>
 		<type fullname="VRTK.Prefabs.Interactions.Interactables.Grab.GrabInteractableConfigurator" preserve="nothing"/>

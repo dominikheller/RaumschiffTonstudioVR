@@ -122,6 +122,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ComputeShader",
+            "fullManagedTypeName": "UnityEngine.ComputeShader",
+            "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Shader",
             "fullManagedTypeName": "UnityEngine.Shader",
             "moduleName": "Core",
@@ -405,6 +414,24 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "Joint",
+            "fullManagedTypeName": "UnityEngine.Joint",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "ConfigurableJoint",
+            "fullManagedTypeName": "UnityEngine.ConfigurableJoint",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Canvas",
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
@@ -417,6 +444,24 @@
             "nativeClass": "RectTransform",
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VisualEffect",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffect",
+            "moduleName": "VFX",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VFXRenderer",
+            "fullManagedTypeName": "UnityEngine.VFX.VFXRenderer",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/SampleScene.unity"
             ]
@@ -516,6 +561,24 @@
             "nativeClass": "CanvasRenderer",
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VisualEffectAsset",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectAsset",
+            "moduleName": "VFX",
+            "usedInScenes": [
+                "Assets/Scenes/SampleScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "VisualEffectObject",
+            "fullManagedTypeName": "UnityEngine.VFX.VisualEffectObject",
+            "moduleName": "VFX",
             "usedInScenes": [
                 "Assets/Scenes/SampleScene.unity"
             ]
@@ -945,6 +1008,20 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.VisualEffectGraph.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.VFX.Utility.VFXPositionBinder",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.VisualEffectGraph.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.VFX.Utility.VFXPropertyBinder",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "Unity.XR.Management.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.XR.Management.XRGeneralSettings",
@@ -1088,6 +1165,27 @@
             "managedAssemblyName": "VRTK.Prefabs.Runtime.dll",
             "nativeClass": "",
             "fullManagedTypeName": "VRTK.Prefabs.Helpers.AxisRotator.AxisRotatorFacade",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "VRTK.Prefabs.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "VRTK.Prefabs.Interactions.Controllables.ComponentTags.ControllableJointDriveContainerTag",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "VRTK.Prefabs.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "VRTK.Prefabs.Interactions.Controllables.DirectionalDriveFacade",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "VRTK.Prefabs.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "VRTK.Prefabs.Interactions.Controllables.DirectionalJointDrive",
             "moduleName": "",
             "usedInScenes": []
         },

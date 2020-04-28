@@ -63,6 +63,7 @@ struct SphereCollider_tAC3E5E20B385DF1C0B17F3EA5C7214F71367706F;
 struct Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA;
 
 IL2CPP_EXTERN_C RuntimeClass* Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Int32_t585191389E07734F19F3156FF88FB3EF4800D102_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t3C9242B5C88A48B2A5BD9FDA6CD0024E792AF08A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var;
@@ -71,6 +72,7 @@ IL2CPP_EXTERN_C RuntimeClass* RaycastHitU5BU5D_tE9BB282384F0196211AD1A4804772541
 IL2CPP_EXTERN_C RuntimeClass* Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral62C02D6AE723470CE8452EABBE91DD3AB73F31F4;
 IL2CPP_EXTERN_C const uint32_t Collider_ClosestPointOnBounds_mB6B4DB64D3684613C3818153E7459FE58BA7393B_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t Collision_get_contacts_m3807F7784D655257D7153CB615EF1FF7FAEAE0CF_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t PhysicsScene_Equals_m538C6A86CCC4EF0546590BAC51E5D08ACC2CBEF9_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t PhysicsScene_Internal_BoxCast_mD2D894CADDE505795A75473F4B88ED330A23C2D4_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t PhysicsScene_Internal_CapsuleCast_m98099F6A0153C33964D1DC312467B438F2CD02BB_MetadataUsageId;
@@ -1579,12 +1581,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_get_center_Injected_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_set_center_Injected_mB0CABC40795A76B769EE17341D7F1D7F4B7D74FE (CharacterController_t0ED98F461DBB7AC5B189C190153D83D5888BF93E * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Collider::ClosestPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_ClosestPoint_Injected_mBB4217A183FB329B8F3B1DE8837CA5B12A3B7D9F (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___position0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret1, const RuntimeMethod* method);
+// System.Void UnityEngine.Collider::Raycast_Injected(UnityEngine.Ray&,System.Single,System.Boolean&,UnityEngine.RaycastHit&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_Raycast_Injected_mB0B58594F6966EC18CBEE58A9458588B028BD68B (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2 * ___ray0, float ___maxDistance1, bool* ___hasHit2, RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 * ___ret3, const RuntimeMethod* method);
+// UnityEngine.RaycastHit UnityEngine.Collider::Raycast(UnityEngine.Ray,System.Single,System.Boolean&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3  Collider_Raycast_m71EB0F5FD51BC4A4EBEA5D3CC1D8AC3E97039B97 (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2  ___ray0, float ___maxDistance1, bool* ___hasHit2, const RuntimeMethod* method);
 // System.Void UnityEngine.Collider::Internal_ClosestPointOnBounds_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_Internal_ClosestPointOnBounds_Injected_m6C6420C5A86476B5CEA015DAE64FFEC28A23F855 (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___point0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___outPos1, float* ___distance2, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::get_zero()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  Vector3_get_zero_m3CDDCAE94581DF3BB16C4B40A100E28E9C6649C2 (const RuntimeMethod* method);
 // System.Void UnityEngine.Collider::Internal_ClosestPointOnBounds(UnityEngine.Vector3,UnityEngine.Vector3&,System.Single&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_Internal_ClosestPointOnBounds_m6A6D70AF5B0247C07D5733615811A889F796C39D (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___point0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___outPos1, float* ___distance2, const RuntimeMethod* method);
+// System.Void System.Array::Copy(System.Array,System.Array,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Copy_m2D96731C600DE8A167348CA8BA796344E64F7434 (RuntimeArray * ___sourceArray0, RuntimeArray * ___destinationArray1, int32_t ___length2, const RuntimeMethod* method);
 // System.Void UnityEngine.ConfigurableJoint::set_linearLimit_Injected(UnityEngine.SoftJointLimit&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurableJoint_set_linearLimit_Injected_m07AFBF1C2812A55724A0D8877E7BC47DE4AD6236 (ConfigurableJoint_tBDB5DA1730E94E4E2FA0E4550624D3616B6AF1D7 * __this, SoftJointLimit_t6E6117F3F5BF24C61A91836119DF9840D752F7E9 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.ConfigurableJoint::set_targetPosition_Injected(UnityEngine.Vector3&)
@@ -1595,6 +1603,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurableJoint_set_xDrive_Injected_m1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurableJoint_set_yDrive_Injected_mEA2F31645634EDD6415C1613EC0D536AEE0708FD (ConfigurableJoint_tBDB5DA1730E94E4E2FA0E4550624D3616B6AF1D7 * __this, JointDrive_t2082D48A52244171DA92ED5FC110D2A58BCBB575 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.ConfigurableJoint::set_zDrive_Injected(UnityEngine.JointDrive&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurableJoint_set_zDrive_Injected_m120527F4C2C505DA741AE82B0D9F5819457AD916 (ConfigurableJoint_tBDB5DA1730E94E4E2FA0E4550624D3616B6AF1D7 * __this, JointDrive_t2082D48A52244171DA92ED5FC110D2A58BCBB575 * ___value0, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.ContactPoint::get_point()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_point_mB222EB009D8B3DBE5F248088167F074551B424F7 (ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * __this, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.ContactPoint::get_normal()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_normal_m0C47576D775F12C2BED5B25ACC720180008EDA3E (ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.HingeJoint::get_motor_Injected(UnityEngine.JointMotor&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HingeJoint_get_motor_Injected_m72868CA98AAA97B7AB2B1934F407C484584A55A3 (HingeJoint_tDA10BC5B1D01F5226ED5B0F83D106E296925036D * __this, JointMotor_t5178E66F3E6E7B049B569177A42433A19011F749 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.HingeJoint::set_motor_Injected(UnityEngine.JointMotor&)
@@ -1797,6 +1809,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForceAtPosition_Injected_m5
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Component__ctor_m5E2740C0ACA4B368BC460315FAA2EDBFEAC0B8EF (Component_t05064EF382ABCAF4B8C94F8A350EA85184C26621 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.SoftJointLimit::set_limit(System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SoftJointLimit_set_limit_m65386F3B7DE799354F233666054E36B4E244FE26 (SoftJointLimit_t6E6117F3F5BF24C61A91836119DF9840D752F7E9 * __this, float ___value0, const RuntimeMethod* method);
+// System.Void UnityEngine.SphereCollider::get_center_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SphereCollider_get_center_Injected_mE8ECA23236D73D0685D76F15CB21BA1C09C9F6DB (SphereCollider_tAC3E5E20B385DF1C0B17F3EA5C7214F71367706F * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret0, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -2091,6 +2105,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E
 		return L_0;
 	}
 }
+// UnityEngine.RaycastHit UnityEngine.Collider::Raycast(UnityEngine.Ray,System.Single,System.Boolean&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3  Collider_Raycast_m71EB0F5FD51BC4A4EBEA5D3CC1D8AC3E97039B97 (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2  ___ray0, float ___maxDistance1, bool* ___hasHit2, const RuntimeMethod* method)
+{
+	RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		float L_0 = ___maxDistance1;
+		bool* L_1 = ___hasHit2;
+		Collider_Raycast_Injected_mB0B58594F6966EC18CBEE58A9458588B028BD68B(__this, (Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2 *)(&___ray0), L_0, (bool*)L_1, (RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)(&V_0), /*hidden argument*/NULL);
+		RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3  L_2 = V_0;
+		return L_2;
+	}
+}
+// System.Boolean UnityEngine.Collider::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Collider_Raycast_mF79828BB10A356336B673595777F7C6941E3F42F (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2  ___ray0, RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 * ___hitInfo1, float ___maxDistance2, const RuntimeMethod* method)
+{
+	bool V_0 = false;
+	bool V_1 = false;
+	{
+		V_0 = (bool)0;
+		RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 * L_0 = ___hitInfo1;
+		Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2  L_1 = ___ray0;
+		float L_2 = ___maxDistance2;
+		RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3  L_3 = Collider_Raycast_m71EB0F5FD51BC4A4EBEA5D3CC1D8AC3E97039B97(__this, L_1, L_2, (bool*)(&V_0), /*hidden argument*/NULL);
+		*(RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *)L_0 = L_3;
+		bool L_4 = V_0;
+		V_1 = L_4;
+		goto IL_0017;
+	}
+
+IL_0017:
+	{
+		bool L_5 = V_1;
+		return L_5;
+	}
+}
 // System.Void UnityEngine.Collider::Internal_ClosestPointOnBounds(UnityEngine.Vector3,UnityEngine.Vector3&,System.Single&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_Internal_ClosestPointOnBounds_m6A6D70AF5B0247C07D5733615811A889F796C39D (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ___point0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___outPos1, float* ___distance2, const RuntimeMethod* method)
 {
@@ -2141,6 +2191,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_ClosestPoint_Injected_mBB4217A1
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Collider_ClosestPoint_Injected_mBB4217A183FB329B8F3B1DE8837CA5B12A3B7D9F_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Collider::ClosestPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___position0, ___ret1);
+}
+// System.Void UnityEngine.Collider::Raycast_Injected(UnityEngine.Ray&,System.Single,System.Boolean&,UnityEngine.RaycastHit&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_Raycast_Injected_mB0B58594F6966EC18CBEE58A9458588B028BD68B (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2 * ___ray0, float ___maxDistance1, bool* ___hasHit2, RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 * ___ret3, const RuntimeMethod* method)
+{
+	typedef void (*Collider_Raycast_Injected_mB0B58594F6966EC18CBEE58A9458588B028BD68B_ftn) (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF *, Ray_tE2163D4CB3E6B267E29F8ABE41684490E4A614B2 *, float, bool*, RaycastHit_t19695F18F9265FE5425062BBA6A4D330480538C3 *);
+	static Collider_Raycast_Injected_mB0B58594F6966EC18CBEE58A9458588B028BD68B_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Collider_Raycast_Injected_mB0B58594F6966EC18CBEE58A9458588B028BD68B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Collider::Raycast_Injected(UnityEngine.Ray&,System.Single,System.Boolean&,UnityEngine.RaycastHit&)");
+	_il2cpp_icall_func(__this, ___ray0, ___maxDistance1, ___hasHit2, ___ret3);
 }
 // System.Void UnityEngine.Collider::Internal_ClosestPointOnBounds_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Collider_Internal_ClosestPointOnBounds_Injected_m6C6420C5A86476B5CEA015DAE64FFEC28A23F855 (Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___point0, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___outPos1, float* ___distance2, const RuntimeMethod* method)
@@ -2203,6 +2262,49 @@ IL_000a:
 	{
 		Collider_t0FEEB36760860AD21B3B1F0509C365B393EC4BDF * L_1 = V_0;
 		return L_1;
+	}
+}
+// UnityEngine.ContactPoint[] UnityEngine.Collision::get_contacts()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* Collision_get_contacts_m3807F7784D655257D7153CB615EF1FF7FAEAE0CF (Collision_t7FF0F4B0E24A2AEB1131DD980F63AB8CBF11FC3C * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Collision_get_contacts_m3807F7784D655257D7153CB615EF1FF7FAEAE0CF_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* V_1 = NULL;
+	{
+		ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* L_0 = __this->get_m_LegacyContacts_6();
+		V_0 = (bool)((((RuntimeObject*)(ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA*)L_0) == ((RuntimeObject*)(RuntimeObject *)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
+		{
+			goto IL_0039;
+		}
+	}
+	{
+		int32_t L_2 = __this->get_m_ContactCount_4();
+		ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* L_3 = (ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA*)(ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA*)SZArrayNew(ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA_il2cpp_TypeInfo_var, (uint32_t)L_2);
+		__this->set_m_LegacyContacts_6(L_3);
+		ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* L_4 = __this->get_m_ReusedContacts_5();
+		ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* L_5 = __this->get_m_LegacyContacts_6();
+		int32_t L_6 = __this->get_m_ContactCount_4();
+		Array_Copy_m2D96731C600DE8A167348CA8BA796344E64F7434((RuntimeArray *)(RuntimeArray *)L_4, (RuntimeArray *)(RuntimeArray *)L_5, L_6, /*hidden argument*/NULL);
+	}
+
+IL_0039:
+	{
+		ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* L_7 = __this->get_m_LegacyContacts_6();
+		V_1 = L_7;
+		goto IL_0042;
+	}
+
+IL_0042:
+	{
+		ContactPointU5BU5D_t10BB5D5BFFFA3C919FD97DFDEDB49D954AFB8EAA* L_8 = V_1;
+		return L_8;
 	}
 }
 #ifdef __clang__
@@ -2384,6 +2486,52 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ConfigurableJoint_set_zDrive_Injected_m1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.Vector3 UnityEngine.ContactPoint::get_point()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_point_mB222EB009D8B3DBE5F248088167F074551B424F7 (ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * __this, const RuntimeMethod* method)
+{
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = __this->get_m_Point_0();
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_point_mB222EB009D8B3DBE5F248088167F074551B424F7_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * _thisAdjusted = reinterpret_cast<ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 *>(__this + _offset);
+	return ContactPoint_get_point_mB222EB009D8B3DBE5F248088167F074551B424F7(_thisAdjusted, method);
+}
+// UnityEngine.Vector3 UnityEngine.ContactPoint::get_normal()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_normal_m0C47576D775F12C2BED5B25ACC720180008EDA3E (ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * __this, const RuntimeMethod* method)
+{
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = __this->get_m_Normal_1();
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  ContactPoint_get_normal_m0C47576D775F12C2BED5B25ACC720180008EDA3E_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 * _thisAdjusted = reinterpret_cast<ContactPoint_tE0D3A30ED34A1FC8CA3F7391348429F3232CA515 *>(__this + _offset);
+	return ContactPoint_get_normal_m0C47576D775F12C2BED5B25ACC720180008EDA3E(_thisAdjusted, method);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -5714,6 +5862,17 @@ IL2CPP_EXTERN_C  void SoftJointLimit_set_limit_m65386F3B7DE799354F233666054E36B4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.Vector3 UnityEngine.SphereCollider::get_center()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  SphereCollider_get_center_mE7AD1AC46974FF23EEA621B872E2962E52A1DB00 (SphereCollider_tAC3E5E20B385DF1C0B17F3EA5C7214F71367706F * __this, const RuntimeMethod* method)
+{
+	Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		SphereCollider_get_center_Injected_mE8ECA23236D73D0685D76F15CB21BA1C09C9F6DB(__this, (Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_0), /*hidden argument*/NULL);
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_0 = V_0;
+		return L_0;
+	}
+}
 // System.Single UnityEngine.SphereCollider::get_radius()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SphereCollider_get_radius_m255804173C17314FD9538AE45C4A46D4882BC094 (SphereCollider_tAC3E5E20B385DF1C0B17F3EA5C7214F71367706F * __this, const RuntimeMethod* method)
 {
@@ -5723,6 +5882,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float SphereCollider_get_radius_m255804173C17
 	_il2cpp_icall_func = (SphereCollider_get_radius_m255804173C17314FD9538AE45C4A46D4882BC094_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SphereCollider::get_radius()");
 	float retVal = _il2cpp_icall_func(__this);
 	return retVal;
+}
+// System.Void UnityEngine.SphereCollider::get_center_Injected(UnityEngine.Vector3&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SphereCollider_get_center_Injected_mE8ECA23236D73D0685D76F15CB21BA1C09C9F6DB (SphereCollider_tAC3E5E20B385DF1C0B17F3EA5C7214F71367706F * __this, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 * ___ret0, const RuntimeMethod* method)
+{
+	typedef void (*SphereCollider_get_center_Injected_mE8ECA23236D73D0685D76F15CB21BA1C09C9F6DB_ftn) (SphereCollider_tAC3E5E20B385DF1C0B17F3EA5C7214F71367706F *, Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *);
+	static SphereCollider_get_center_Injected_mE8ECA23236D73D0685D76F15CB21BA1C09C9F6DB_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (SphereCollider_get_center_Injected_mE8ECA23236D73D0685D76F15CB21BA1C09C9F6DB_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SphereCollider::get_center_Injected(UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___ret0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
