@@ -203,6 +203,31 @@ namespace OVRTouchSample
 
         private float m_collisionScaleCurrent = 0.0f;
 
+        public void TriggerEnable(bool enabled)
+        {
+
+            if (enabled)
+            {
+
+                for (int i = 0; i < m_colliders.Length; ++i)
+                {
+                    Collider collider = m_colliders[i];
+
+                    collider.isTrigger = true;
+                }
+            }
+            else
+            {
+
+                for (int i = 0; i < m_colliders.Length; ++i)
+                {
+                    Collider collider = m_colliders[i];
+                    collider.isTrigger = false;
+
+                }
+            }
+        }
+
         private void CollisionEnable(bool enabled)
         {
             if (m_collisionEnabled == enabled)

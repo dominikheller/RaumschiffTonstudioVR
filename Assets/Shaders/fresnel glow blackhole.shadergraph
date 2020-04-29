@@ -4,7 +4,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"321fd94c-77fa-4e29-ae66-5db124849989\"\n    },\n    \"m_Name\": \"Fresnel Color\",\n    \"m_DefaultReferenceName\": \"Color_B23AA66E\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": {\n        \"r\": 0.21989524364471436,\n        \"g\": 1.0332337617874146,\n        \"b\": 2.0,\n        \"a\": 0.0\n    },\n    \"m_ColorMode\": 1\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"321fd94c-77fa-4e29-ae66-5db124849989\"\n    },\n    \"m_Name\": \"Fresnel Color\",\n    \"m_DefaultReferenceName\": \"Color_B23AA66E\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": {\n        \"r\": 0.81110680103302,\n        \"g\": 3.2241785526275636,\n        \"b\": 7.37721061706543,\n        \"a\": 0.0\n    },\n    \"m_ColorMode\": 1\n}"
         },
         {
             "typeInfo": {
