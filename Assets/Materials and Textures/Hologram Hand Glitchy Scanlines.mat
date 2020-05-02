@@ -68,7 +68,7 @@ Material:
     - _EnvironmentReflections: 1
     - _FlickerSpeed: 6.2
     - _Fold: 3
-    - _GlitchIntensity: 0.01
+    - _GlitchIntensity: 0.02
     - _GlitchSpeed: 34
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -81,7 +81,7 @@ Material:
     - _ReceiveShadows: 1
     - _RimPower: 10
     - _ScanSpeed: 2
-    - _ScanTiling: 4000
+    - _ScanTiling: 8000
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
