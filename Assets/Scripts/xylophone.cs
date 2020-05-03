@@ -19,10 +19,18 @@ public class xylophone : MonoBehaviour
         
     }
 
+
+
     void OnTriggerEnter(Collider other)
     {
-        audioData.Play(0);
+
+        if (other.tag == "playsXylo")
+        {
+            audioData.Play(0);
+        }
+
     }
 
-
 }
+
+
