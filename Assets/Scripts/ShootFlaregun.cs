@@ -9,6 +9,10 @@ public class ShootFlaregun : MonoBehaviour
     public float velocity;
     public GameObject payload;
     public Vector3 offset;
+    public GameObject particletrail;
+    public float fuseTime;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +32,37 @@ public class ShootFlaregun : MonoBehaviour
        // offset = new Vector3(0.0f, 0.0f, 0.3f);
 
         GameObject nPayload = Instantiate(payload, transform.position + offset, transform.rotation);
+        GameObject nParticletrail = Instantiate(particletrail, transform.position + offset, transform.rotation);
         nPayload.GetComponent<SphereCollider>().isTrigger = false;
         nPayload.GetComponent<Rigidbody>().isKinematic = false;
         nPayload.GetComponent<Rigidbody>().velocity += transform.forward * velocity;
+        StartCoroutine(waitForBallExplode(nPayload));
+        
+    
+    //  var locVel = transform.InverseTransformDirection(rigidbody.velocity);
+    //  locVel.z = MovSpeed;
+    //  rigidbody.velocity = transform.TransformDirection(locVel);
 
+    }
 
-      //  var locVel = transform.InverseTransformDirection(rigidbody.velocity);
-      //  locVel.z = MovSpeed;
-      //  rigidbody.velocity = transform.TransformDirection(locVel);
+    IEnumerator waitForBallExplode(GameObject nPayload)
+    {
+        yield return new WaitForSeconds(fuseTime);
+        explode(nPayload);
+
+    }
+ 
+    public void explode(GameObject nPayload)
+    {
+        nPayload.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
+        nPayload.GetComponent<Rigidbody>().useGravity = false;
+        StartCoroutine(waitForKill(nPayload));
+    }
+
+    IEnumerator waitForKill(GameObject nPayload)
+    {
+        yield return new WaitForSeconds(8);
+        Destroy(nPayload);
 
     }
 
