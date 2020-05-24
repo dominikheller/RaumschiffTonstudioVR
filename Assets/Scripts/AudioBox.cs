@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using VRTK.Prefabs.Interactions.Interactables;
 
 public class AudioBox : MonoBehaviour
 {
@@ -27,6 +28,30 @@ public class AudioBox : MonoBehaviour
 
     void Update()
     {
+        bool AudioSourceOff = false;
+
+        if (controller.transform.localPosition.x < -.5f || controller.transform.localPosition.x > .5f)
+        {
+            AudioSourceOff = true;
+        }
+        if (controller.transform.localPosition.y < -.5f || controller.transform.localPosition.y > .5f)
+        {
+            AudioSourceOff = true;
+        }
+        if (controller.transform.localPosition.z < -.5f || controller.transform.localPosition.z > .5f)
+        {
+            AudioSourceOff = true;
+        }
+
+        if (AudioSourceOff == true)
+        {
+            gameObject.GetComponent<AudioSource>().mute = true;
+        }
+        else
+        {
+            gameObject.GetComponent<AudioSource>().mute = false;
+        }
+
         checkXValues();
         checkYValues();
         checkZValues();
