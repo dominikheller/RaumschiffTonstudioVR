@@ -5,23 +5,13 @@ public class AudioBoxVTwo : MonoBehaviour
 {
     public GameObject controller;
 
-    private float sampling_frequency = 48000;
+    private float sampling_frequency = 44000;
 
-    [Range(0f, 1f)]
-    public float noiseRatio = 0.5f;
-
-    //for noise part
-    [Range(-1f, 1f)]
+    private float noiseRatio = .5f;
     public float offset;
 
-    public float cutoffOn = 800;
-    public float cutoffOff = 100;
-
-    public bool cutOff;
-
-    //for tonal part
-    public float frequency = 300f;
-    public float gain = 100f;
+    public float frequency = 0;
+    public float gain = 0;
 
     private float increment;
     private float phase;
@@ -41,25 +31,16 @@ public class AudioBoxVTwo : MonoBehaviour
     {
         float tonalPart = 0;
         float noisePart = 0;
-
-        // update increment in case frequency has changed
         increment = frequency * 2f * Mathf.PI / sampling_frequency;
 
         for (int i = 0; i < data.Length; i++)
         {
-            //noise
             noisePart = noiseRatio * (float)(rand.NextDouble() * 2.0 - 1.0 + offset);
-
             phase = phase + increment;
             if (phase > 2 * Mathf.PI) phase = 0;
 
-            //tone
             tonalPart = (1f - noiseRatio) * (float)(gain * Mathf.Sin(phase));
-
-            //together
             data[i] = noisePart + tonalPart;
-
-            // if we have stereo, we copy the mono data to each channel
             if (channels == 2)
             {
                 data[i + 1] = data[i];
@@ -72,8 +53,9 @@ public class AudioBoxVTwo : MonoBehaviour
     {
         bool AudioSourceOff = false;
 
-        gameObject.GetComponent<AudioSource>().pitch = (controller.transform.localPosition.z) + 1.5f;
-        gain = (controller.transform.localPosition.x * 1000) + 150f;
+        // spatial blend is just a temporary third axis sound effect and should be replaced with a more fitting parameter
+        gameObject.GetComponent<AudioSource>().spatialBlend = controller.transform.localPosition.z + .5f;
+        gain = (controller.transform.localPosition.x * 100) + 50f;
         frequency = (controller.transform.localPosition.y * 100) + 350f;
 
         if(controller.transform.localPosition.x < -.5f || controller.transform.localPosition.x > .5f)
@@ -96,7 +78,5 @@ public class AudioBoxVTwo : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().mute = false;
         }
-
-        lowPassFilter.cutoffFrequency = cutOff ? cutoffOn : cutoffOff;
     }
 }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using VRTK.Prefabs.Interactions.Interactables;
 
 public class AudioBox : MonoBehaviour
 {
