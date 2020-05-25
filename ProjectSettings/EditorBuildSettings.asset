@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ParticleSculpture.unity
     guid: 55413776e38e9124582bd63ed782da1c
+  - enabled: 1
+    path: Assets/Scenes/SampleScene2.unity
+    guid: ff05d9ff4b041c940865ee6dcd1a55d1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d9e40983870506e46b3a0f9b52a9d568,
       type: 2}

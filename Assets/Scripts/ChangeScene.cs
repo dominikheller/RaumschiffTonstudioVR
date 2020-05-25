@@ -10,4 +10,14 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+    public void changeSceneAdditive(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }
+
+    public void unloadScene()
+    {
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+    }
 }
