@@ -91,7 +91,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_DCB0AC42: {r: 3.3319895, g: 0, b: 5.2164755, a: 1}
+    - Color_DCB0AC42: {r: 7.654902, g: 0, b: 11.984314, a: 1}
     - Color_E9715C80: {r: 0.5638943, g: 0, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
