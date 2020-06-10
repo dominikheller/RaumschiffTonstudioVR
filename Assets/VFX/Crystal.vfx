@@ -127,7 +127,7 @@ VisualEffectResource:
       /*inout */attributes.velocity,  /*inout */attributes.seed, float3(-0.00999999978,
       0.0399999991, -0.00999999978), float3(0.00999999978, 0.0599999987, 0.00999999978));\n       
       }\n        {\n            SetAttribute_F01429A3( /*inout */attributes.lifetime, 
-      /*inout */attributes.seed, (float)18, (float)20);\n        }\n        \n\r\n\t\t\r\n#if
+      /*inout */attributes.seed, (float)19, (float)22);\n        }\n        \n\r\n\t\t\r\n#if
       VFX_USE_ALIVE_CURRENT\r\n        if (attributes.alive)\r\n#endif       \r\n       
       {\r\n#if USE_DEAD_LIST\r\n\t        uint deadIndex = deadListIn.DecrementCounter();\r\n           
       uint index = deadListIn[deadIndex];\r\n#else\r\n            uint index = particleIndex;\r\n#endif\r\n           
@@ -817,9 +817,9 @@ VisualEffectResource:
         - m_ExpressionIndex: 8
           m_Value: 0.001
         - m_ExpressionIndex: 9
-          m_Value: 20
+          m_Value: 22
         - m_ExpressionIndex: 10
-          m_Value: 18
+          m_Value: 19
         - m_ExpressionIndex: 15
           m_Value: 0.0005
       m_Vector2f:
@@ -2040,7 +2040,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 18
+      m_SerializableObject: 19
     m_Space: 2147483647
   m_Property:
     name: A
@@ -2081,7 +2081,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 20
+      m_SerializableObject: 22
     m_Space: 2147483647
   m_Property:
     name: B
