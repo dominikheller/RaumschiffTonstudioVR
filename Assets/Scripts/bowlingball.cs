@@ -27,7 +27,7 @@ public class bowlingball : MonoBehaviour
             if(!rotationSound.isPlaying && isGrounded == true)
             {
                 rotationSound.Play();
-                changeAudioVolume();
+                //changeAudioVolume();
                 //changeAudioSpeed(2);
             }
         }

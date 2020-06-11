@@ -10,7 +10,24 @@ public class Drums : MonoBehaviour
     {
         if(other.tag == "Drumstick")
         {
+            GameObject parentObject = findParentByTag(other.gameObject, "PrimaryGrab");
+            float velocity = parentObject.GetComponent<VelocityIndicator>().velocity;
+            audioData.volume = velocity;
             audioData.Play();
         }
+    }
+
+    public static GameObject findParentByTag(GameObject childObject, string tag)
+    {
+        Transform t = childObject.transform;
+        while (t.parent != null)
+        {
+            if (t.parent.tag == tag)
+            {
+                return t.parent.gameObject;
+            }
+            t = t.parent.transform;
+        }
+        return null;
     }
 }

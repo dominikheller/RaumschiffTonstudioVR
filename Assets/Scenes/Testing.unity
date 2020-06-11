@@ -2542,7 +2542,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7ffb4d99585e0545a37137cbf91c193, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ad79e7b5249ae6d4fa32819c21f8ef4b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2638,9 +2638,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3952008f9ac8404b93553a36696a16e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7e766ec13928fbe49af2563419107451, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2787,8 +2787,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b838855bbc7f16c4c9e296122018d2d4, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.201
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7492,6 +7492,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &181556588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7915416951780248044, guid: 240fdd985e025cb459f73d2b1bb7b341,
+    type: 3}
+  m_PrefabInstance: {fileID: 1024144709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &181556589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181556588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4a4d4048470ff48bf538332f1d17f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
 --- !u!1 &181654129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10206,6 +10225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915416951780248044, guid: 240fdd985e025cb459f73d2b1bb7b341,
+        type: 3}
+      propertyPath: m_TagString
+      value: PrimaryGrab
       objectReference: {fileID: 0}
     - target: {fileID: 7996315181941059761, guid: 240fdd985e025cb459f73d2b1bb7b341,
         type: 3}
@@ -36124,7 +36148,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7ffb4d99585e0545a37137cbf91c193, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ad79e7b5249ae6d4fa32819c21f8ef4b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -36220,9 +36244,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3952008f9ac8404b93553a36696a16e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ca71bbf9386e3a84a83cc18681e35c86, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -39763,6 +39787,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 7915416951780248044, guid: 240fdd985e025cb459f73d2b1bb7b341,
+        type: 3}
+      propertyPath: m_TagString
+      value: PrimaryGrab
+      objectReference: {fileID: 0}
     - target: {fileID: 7996315181941059761, guid: 240fdd985e025cb459f73d2b1bb7b341,
         type: 3}
       propertyPath: m_Layer
@@ -40544,7 +40573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8314c9a77122ba744ac0a55af02c58b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facade: {fileID: 0}
+  facade: {fileID: 1725560274}
   primaryAction: {fileID: 806671817}
   secondaryAction: {fileID: 560139091}
   grabReceiver: {fileID: 1635912509}
@@ -55844,7 +55873,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4d8222a81d1bcd044949604f43cb220f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -58064,7 +58093,7 @@ PrefabInstance:
         type: 3}
       propertyPath: facade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1725560274}
     - target: {fileID: 4338050410375527398, guid: 57cea8fee147c654397a0685154f498e,
         type: 3}
       propertyPath: m_Layer
@@ -69984,7 +70013,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f7ffb4d99585e0545a37137cbf91c193, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ad79e7b5249ae6d4fa32819c21f8ef4b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -70080,9 +70109,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3952008f9ac8404b93553a36696a16e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7e766ec13928fbe49af2563419107451, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -71774,13 +71803,14 @@ GameObject:
   - component: {fileID: 1935770615}
   - component: {fileID: 1918850903}
   - component: {fileID: 1936072664}
+  - component: {fileID: 1936072665}
   m_Layer: 14
   m_Name: BassDrum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1936072664
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -71794,6 +71824,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1936072665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936072663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4a4d4048470ff48bf538332f1d17f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
 --- !u!1 &1936072671
 GameObject:
   m_ObjectHideFlags: 0
@@ -76643,6 +76686,25 @@ MonoBehaviour:
       m_Calls: []
   receiveValidity:
     field: {fileID: 0}
+--- !u!1 &2088646935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7915416951780248044, guid: 240fdd985e025cb459f73d2b1bb7b341,
+    type: 3}
+  m_PrefabInstance: {fileID: 228900134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2088646936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088646935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d4a4d4048470ff48bf538332f1d17f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
 --- !u!1 &2089385441
 GameObject:
   m_ObjectHideFlags: 0
