@@ -3,7 +3,32 @@ guid: 2822e190d766a5645b85722cc14570f1
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_17___885
+    second: {fileID: 2100000, guid: 84dc74c9fd049604f88ddd1b84673c53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_18___885
+    second: {fileID: 2100000, guid: 40a74551c7ac2144fa21e73c270900a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_20___885
+    second: {fileID: 2100000, guid: a145a97c486c20646bd56e60c04a2367, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_23___885
+    second: {fileID: 2100000, guid: 0bfa6d3d197ad944c9c136fbfd37ad42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_8___885
+    second: {fileID: 2100000, guid: 4afc7a0d12199c44fbdf99fbb4b05025, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -36,7 +61,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -44,7 +69,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
