@@ -15,6 +15,11 @@ public class Torch : MonoBehaviour
         {
             velocity = GetComponent<VelocityIndicator>().velocity;
             audioSource.volume = .1f + velocity;
+
+            if(velocity > 5f)
+            {
+                audioSource.volume = 0;
+            }
         } else
         {
             StartCoroutine(ExecuteAfterTime(.5f));
