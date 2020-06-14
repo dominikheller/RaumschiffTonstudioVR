@@ -7,6 +7,7 @@ TagManager:
   - playsXylo
   - Drumstick
   - PrimaryGrab
+  - PlayerHeadset
   layers:
   - Default
   - TransparentFX
