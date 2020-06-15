@@ -17,7 +17,7 @@ public class CrystalReaction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "PlayerHeadset")
+        if (other.tag == "PlayerHeadsetClimbGlint")
         {
             anim.Play("glow");
             audioData.Play(0);

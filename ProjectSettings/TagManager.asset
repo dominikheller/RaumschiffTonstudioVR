@@ -8,6 +8,7 @@ TagManager:
   - Drumstick
   - PrimaryGrab
   - PlayerHeadset
+  - PlayerHeadsetClimbGlint
   layers:
   - Default
   - TransparentFX

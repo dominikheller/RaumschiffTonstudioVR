@@ -22,7 +22,7 @@
             "typeInfo": {
                 "fullName": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty"
             },
-            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"e2708b25-7ca3-4fe2-8ad7-8e261ff4b9e5\"\n    },\n    \"m_Name\": \"RimPower\",\n    \"m_DefaultReferenceName\": \"Vector2_866781E9\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": {\n        \"x\": 3.0,\n        \"y\": 33.0,\n        \"z\": 0.0,\n        \"w\": 0.0\n    }\n}"
+            "JSONnodeData": "{\n    \"m_Guid\": {\n        \"m_GuidSerialized\": \"e2708b25-7ca3-4fe2-8ad7-8e261ff4b9e5\"\n    },\n    \"m_Name\": \"RimPower\",\n    \"m_DefaultReferenceName\": \"Vector2_866781E9\",\n    \"m_OverrideReferenceName\": \"\",\n    \"m_GeneratePropertyBlock\": true,\n    \"m_Precision\": 0,\n    \"m_GPUInstanced\": false,\n    \"m_Hidden\": false,\n    \"m_Value\": {\n        \"x\": 3.0,\n        \"y\": 5.0,\n        \"z\": 0.0,\n        \"w\": 0.0\n    }\n}"
         },
         {
             "typeInfo": {
@@ -256,7 +256,7 @@
     ],
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"fileID\":-2432090755550338912,\"guid\":\"742f8ffffa46e834ebba5e05e361e6c6\",\"type\":3}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":-5715045772301448208,\"guid\":\"62cd2d6e0720e7440860b162572d98a9\",\"type\":3}}",
             "m_Guid": ""
         }
     },

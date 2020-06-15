@@ -191,7 +191,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 51ec9f0db5bba684fbfeb53487b3491b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.07
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -306,7 +306,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0.8101987, z: 0}
 --- !u!95 &3270505302896730869
 Animator:
