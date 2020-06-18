@@ -13,7 +13,7 @@ public class Drums : MonoBehaviour
             GameObject parentObject = findParentByTag(other.gameObject, "PrimaryGrab");
             float velocity = parentObject.GetComponent<VelocityIndicator>().velocity;
             audioData.volume = velocity;
-            audioData.Play();
+            audioData.Play(0);
         }
     }
 
