@@ -94,6 +94,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - EmmissionStrength: 1
+    - FresnelStrength: 0
     - Vector1_48A5C564: 1
     - Vector1_83E736EF: -0.33
     - Vector1_99C42CE5: 1
@@ -124,7 +126,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_DCB0AC42: {r: 2.1185474, g: 2.1185474, b: 2.1185474, a: 1}
+    - Color_DCB0AC42: {r: 1.0592737, g: 1.0592737, b: 1.0592737, a: 1}
     - Color_E9715C80: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0.21960784}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
