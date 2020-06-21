@@ -5,6 +5,7 @@ using UnityEngine;
 public class Drums : MonoBehaviour
 {
     public AudioSource audioData;
+    public GameObject audioHandler;
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,8 +13,7 @@ public class Drums : MonoBehaviour
         {
             GameObject parentObject = findParentByTag(other.gameObject, "PrimaryGrab");
             float velocity = parentObject.GetComponent<VelocityIndicator>().velocity;
-            audioData.volume = velocity;
-            audioData.Play(0);
+            audioHandler.GetComponent<AudioHandler>().playAudio(audioData, Mathf.Pow(velocity, 1.75f));
         }
     }
 
