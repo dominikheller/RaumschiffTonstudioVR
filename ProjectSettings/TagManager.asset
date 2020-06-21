@@ -9,6 +9,7 @@ TagManager:
   - PrimaryGrab
   - PlayerHeadset
   - PlayerHeadsetClimbGlint
+  - Platform
   layers:
   - Default
   - TransparentFX
