@@ -10,6 +10,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: 24 - Default
+    second: {fileID: 2100000, guid: adff3c64d6fe28b40addb42069bc5d5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Boden
     second: {fileID: 2100000, guid: afbeb912f9d997449a728e0376c9a140, type: 2}
   materials:
