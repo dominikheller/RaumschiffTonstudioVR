@@ -7,6 +7,8 @@ public class Knob : MonoBehaviour
     public GameObject interactableContainer;
     public GameObject knobMeshRepresentation;
 
+    public string soundEffectTitle;
+
     private bool currentlyGrabbed;
     private Vector3 initialInteractableContainerPosition;
     private string handSide;
@@ -27,6 +29,7 @@ public class Knob : MonoBehaviour
             {
                 case "rightHandSide":
                     knobMeshRepresentation.transform.rotation = new Quaternion(0, interactableContainer.transform.rotation.y, 0, interactableContainer.transform.rotation.w);
+                    GetComponent<SoundEffectController>().setSoundEffectLevel(soundEffectTitle, knobMeshRepresentation.transform.rotation.y * (-10));
                     break;
                 case "leftHandSide":
                     knobMeshRepresentation.transform.rotation = new Quaternion(0, interactableContainer.transform.rotation.y, 0, interactableContainer.transform.rotation.w);
