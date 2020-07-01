@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
 public class audioBlock : MonoBehaviour
@@ -10,34 +8,35 @@ public class audioBlock : MonoBehaviour
     public Material materialBefore;
     public Material materialDuring;
     public Material materialNone;
+    public Material pBMaterial;
 
     public float raycastDistance = 1.0f;
     public bool activated = false;
     Vector3 blockSize;
 
+    public GameObject progressBarContainer;
     public GameObject progressBar;
-    private float timer;
+    private float clipLength;
     private float unitLength;
-    private float unitTime;
+    private float deltaTime = 0f;
+    private float fps;
+
+    private Vector3 initalScale;
 
     void Start()
     {
         blockSize = transform.localScale;
         blockSize.x += audioSource.clip.length * 0.2f;
         transform.localScale = blockSize;
-
-        unitTime = audioSource.clip.length / 100;
-        unitLength = gameObject.transform.localScale.z / 100;
-
-        Debug.Log("audioLength: " + audioSource.clip.length);
-        Debug.Log("gameObjectLength: " + gameObject.transform.localScale.z);
-        Debug.Log("unitTime: " + unitTime);
-        Debug.Log("unitLength: " + unitLength);
+        clipLength = audioSource.clip.length;
+        initalScale = progressBarContainer.transform.localScale;
     }
 
     void Update()
     {
-        timer += Time.deltaTime;
+        deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
+        fps = 1.0f / deltaTime;
+        unitLength = gameObject.transform.localScale.z / (fps * clipLength);
 
         if (audioSource.clip == null)
         {
@@ -60,12 +59,19 @@ public class audioBlock : MonoBehaviour
             shootRaycastForNext();
         }
 
-        if(activated && timer >= unitTime && progressBar.transform.localScale.z <= gameObject.transform.localScale.z)
+        if(activated && audioSource.isPlaying && progressBarContainer.transform.localScale.z <= gameObject.transform.localScale.z)
         {
-            if (progressBar != null)
+            if (progressBarContainer != null)
             {
-                progressBar.transform.localScale += new Vector3(0, 0, unitLength);
+                Renderer pBRenderer = progressBar.GetComponent<Renderer>();
+                pBRenderer.enabled = true;
+                progressBarContainer.transform.localScale += new Vector3(0, 0, unitLength);
             }
+        } else
+        {
+            Renderer pBRenderer = progressBar.GetComponent<Renderer>();
+            pBRenderer.enabled = false;
+            progressBarContainer.transform.localScale = initalScale;
         }
     }
 
@@ -77,7 +83,6 @@ public class audioBlock : MonoBehaviour
         {
             hit.transform.SendMessage("triggered");
         }
-
         activated = false;
     }
 
