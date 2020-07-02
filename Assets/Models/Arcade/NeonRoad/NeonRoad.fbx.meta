@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: cbd5fd828e91c6a418fc4a06fdeb7e21
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 5074539660057014948
+    second: Camera|Cylinder.001Action
+  - first:
+      74: 1820556836346035431
+    second: Camera|Cylinder.002Action
+  - first:
+      74: -3053603118378398289
+    second: Camera|Cylinder.003Action
+  - first:
+      74: -3809952647493575977
+    second: Camera|CylinderAction
+  - first:
+      74: 6931594006465491810
+    second: Camera|MovingAction
+  - first:
+      74: 8535994297788887851
+    second: Moving|Cylinder.001Action
+  - first:
+      74: -1934380451595550848
+    second: Moving|Cylinder.002Action
+  - first:
+      74: -1226466214380037272
+    second: Moving|Cylinder.003Action
+  - first:
+      74: 5280184825200469767
+    second: Moving|CylinderAction
+  - first:
+      74: 5950042405024970591
+    second: Moving|MovingAction
+  - first:
+      74: -7612585916979618735
+    second: Enviroment|Cylinder.001Action
+  - first:
+      74: -5939060304101283891
+    second: Enviroment|Cylinder.002Action
+  - first:
+      74: -8957798453728693253
+    second: Enviroment|Cylinder.003Action
+  - first:
+      74: -3239703784449538644
+    second: Enviroment|CylinderAction
+  - first:
+      74: -2938198926126157673
+    second: Enviroment|MovingAction
+  - first:
+      74: -1728517896257494836
+    second: Road|Cylinder.001Action
+  - first:
+      74: -7584899803479383099
+    second: Road|Cylinder.002Action
+  - first:
+      74: 8985807107718089951
+    second: Road|Cylinder.003Action
+  - first:
+      74: -2426405208576188001
+    second: Road|CylinderAction
+  - first:
+      74: -1281434980730161151
+    second: Road|MovingAction
+  - first:
+      74: -5972919841627744797
+    second: CenterLine|Cylinder.001Action
+  - first:
+      74: -1153553680253941089
+    second: CenterLine|Cylinder.002Action
+  - first:
+      74: 4308712230976428635
+    second: CenterLine|Cylinder.003Action
+  - first:
+      74: -1388987355548297993
+    second: CenterLine|CylinderAction
+  - first:
+      74: 173166893181243703
+    second: CenterLine|MovingAction
+  - first:
+      74: -1382203851041537263
+    second: SideRight|Cylinder.001Action
+  - first:
+      74: -1494534217564044148
+    second: SideRight|Cylinder.002Action
+  - first:
+      74: -9145534713940293379
+    second: SideRight|Cylinder.003Action
+  - first:
+      74: 3671930392793427108
+    second: SideRight|CylinderAction
+  - first:
+      74: -504954589313621736
+    second: SideRight|MovingAction
+  - first:
+      74: -140933882604579941
+    second: SideSideLeft|Cylinder.001Action
+  - first:
+      74: -3553324308986358181
+    second: SideSideLeft|Cylinder.002Action
+  - first:
+      74: -9166445360098151906
+    second: SideSideLeft|Cylinder.003Action
+  - first:
+      74: 8543977445815545767
+    second: SideSideLeft|CylinderAction
+  - first:
+      74: -2149653814187638600
+    second: SideSideLeft|MovingAction
+  - first:
+      74: 2928082774472332211
+    second: BackGround|Cylinder.001Action
+  - first:
+      74: 75969866098818699
+    second: BackGround|Cylinder.002Action
+  - first:
+      74: -455368803705883468
+    second: BackGround|Cylinder.003Action
+  - first:
+      74: -5431848658903770657
+    second: BackGround|CylinderAction
+  - first:
+      74: -566352485628672691
+    second: BackGround|MovingAction
+  - first:
+      74: 4867397111843795298
+    second: Shade1|Cylinder.001Action
+  - first:
+      74: 8262624854399736553
+    second: Shade1|Cylinder.002Action
+  - first:
+      74: -2520104957017542939
+    second: Shade1|Cylinder.003Action
+  - first:
+      74: -4661806121868137872
+    second: Shade1|CylinderAction
+  - first:
+      74: -4235911160616149548
+    second: Shade1|MovingAction
+  - first:
+      74: -8223384724041491960
+    second: Shade2|Cylinder.001Action
+  - first:
+      74: 1308812320899095385
+    second: Shade2|Cylinder.002Action
+  - first:
+      74: 8767845277197183060
+    second: Shade2|Cylinder.003Action
+  - first:
+      74: -3421162481258594246
+    second: Shade2|CylinderAction
+  - first:
+      74: 1292373789381645066
+    second: Shade2|MovingAction
+  - first:
+      74: 2722801249597049410
+    second: Shade3|Cylinder.001Action
+  - first:
+      74: 1131573982843990703
+    second: Shade3|Cylinder.002Action
+  - first:
+      74: -184159175526348619
+    second: Shade3|Cylinder.003Action
+  - first:
+      74: 2106727814896389448
+    second: Shade3|CylinderAction
+  - first:
+      74: 7750042509942027576
+    second: Shade3|MovingAction
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: a7c05efd6dcb5bf48add47d1ff14bb96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 0a7f32865cb49894190ef19bef6e4823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 303c4c74624f72741b21433f4f5aa872, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 48b02a7a16375dd46996610d4748d374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: f93a2f2d5733a164aa08be51f5e7a365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 14096de03053e334c9d7d95d8a50cd23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 760c0d0a76b01ed40a2d5db24135ae11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 1080c97d0c3a29b429a1060c9baaadea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 44575acc5f2617c4da205602a4cd3c02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: 0b9652cccadf93a46b4bd0e94619bf6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.010
+    second: {fileID: 2100000, guid: ea37a4bcfccdfab4cbc394f14e5a429d, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
