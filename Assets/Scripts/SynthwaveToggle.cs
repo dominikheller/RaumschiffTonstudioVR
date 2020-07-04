@@ -9,6 +9,10 @@ public class SynthwaveToggle : MonoBehaviour
     public Material skyboxDefault;
     public bool synthOn = false;
     public GameObject synthScape;
+    public AudioClip clipL;
+    public AudioClip clipR;
+    public AudioSource audiosourceL;
+    public AudioSource audiosourceR;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +32,14 @@ public class SynthwaveToggle : MonoBehaviour
         {
             RenderSettings.skybox = skyboxToChangeTo;
             synthScape.SetActive(true);
+
+            audiosourceL.clip = clipL;
+            audiosourceR.clip = clipR;
+            audiosourceL.Play();
+            audiosourceR.Play();
+
             synthOn = true;
+           
         }
         
         else if (synthOn == true)
@@ -36,6 +47,10 @@ public class SynthwaveToggle : MonoBehaviour
 
             RenderSettings.skybox = skyboxDefault;
             synthScape.SetActive(false);
+
+            audiosourceL.Stop();
+            audiosourceR.Stop();
+
             synthOn = false;
 
         }
