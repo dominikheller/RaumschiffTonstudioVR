@@ -109,6 +109,9 @@ MonoBehaviour:
   NewMinimumValue: 1
   NewMaximumValue: 2
   lampe: {fileID: 2744517749006866188}
+  lampe2: {fileID: 2744517749006866188}
+  lampe3: {fileID: 2744517749006866188}
+  lampe4: {fileID: 2744517749006866188}
   lampeAn: {fileID: 2100000, guid: da15cd8d33d6a79419fbcc568eb90cd2, type: 2}
   lampeAus: {fileID: 2100000, guid: da57b2ca10732be4aa2a551ebd8175ca, type: 2}
 --- !u!1 &2744517748946399546

@@ -12,6 +12,9 @@ public class SliderAudioEffects : MonoBehaviour
     public float NewMinimumValue;
     public float NewMaximumValue;
     public GameObject lampe;
+    public GameObject lampe2;
+    public GameObject lampe3; 
+    public GameObject lampe4;
     public Material lampeAn;
     public Material lampeAus;
    // public AudioSource asourceL;
@@ -67,16 +70,57 @@ public class SliderAudioEffects : MonoBehaviour
 
     }
 
+    public void doEffectLog(float sliderValue)
+    {
+
+        float effectValue = scale(sliderValue);
+        effectValue = Mathf.Log10(effectValue) * 20;
+
+        lautsprecherMixer.SetFloat(effectName, effectValue);
+
+        if (sliderValue > 0.501f)
+        {
+            turnLampOn();
+        }
+
+        else if (sliderValue < 0.501f)
+        {
+            turnLampOff();
+        }
+
+    }
+
     public void turnLampOn()
     {
         Renderer sliderRend = lampe.GetComponent<Renderer>();
         sliderRend.material = lampeAn;
+
+        Renderer sliderRend2 = lampe2.GetComponent<Renderer>();
+        sliderRend2.material = lampeAn;
+
+        Renderer sliderRend3 = lampe3.GetComponent<Renderer>();
+        sliderRend3.material = lampeAn;
+
+        Renderer sliderRend4 = lampe4.GetComponent<Renderer>();
+        sliderRend4.material = lampeAn;
+
     }
 
     public void turnLampOff()
     {
         Renderer sliderRend = lampe.GetComponent<Renderer>();
         sliderRend.material = lampeAus;
+        
+
+        Renderer sliderRend2 = lampe2.GetComponent<Renderer>();
+        sliderRend2.material = lampeAus;
+
+        Renderer sliderRend3 = lampe3.GetComponent<Renderer>();
+        sliderRend3.material = lampeAus;
+
+        Renderer sliderRend4 = lampe4.GetComponent<Renderer>();
+        sliderRend4.material = lampeAus;
+
     }
 
 }
