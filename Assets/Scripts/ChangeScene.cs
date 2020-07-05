@@ -1,29 +1,29 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-   public void changeSceneTo(string sceneName)
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    public void changeSceneTo(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
 
-    public void changeSceneAdditive(string sceneName)
+    public void initChangeSceneAdditive(string sceneName)
     {
-        Scene activeScene = SceneManager.GetActiveScene();
-        setGameObjectsStatus(activeScene.GetRootGameObjects(), false);
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        StartCoroutine(changeSceneAdditive(sceneName));
     }
 
-    public void unloadScene(string sceneName)
+    public void initUnloadScene(string sceneName)
     {
-        Scene rootScene = SceneManager.GetSceneAt(0);
-        SceneManager.SetActiveScene(rootScene);
-        setGameObjectsStatus(rootScene.GetRootGameObjects(), true);
-        SceneManager.UnloadSceneAsync(sceneName);
+        StartCoroutine(unloadScene(sceneName));
     }
 
     public void setGameObjectsStatus(GameObject[] objects, bool status)
@@ -32,6 +32,27 @@ public class ChangeScene : MonoBehaviour
         {
             objects[i].gameObject.SetActive(status);
         }
+    }
+
+    IEnumerator changeSceneAdditive(string sceneName)
+    {
+        player.GetComponent<TriggerTransition>().triggerTransition = true;
+        yield return new WaitForSeconds(1);
+        gameObject.GetComponent<ChangeSkybox>().ChangeTheSkybox();
+        Scene activeScene = SceneManager.GetActiveScene();
+        setGameObjectsStatus(activeScene.GetRootGameObjects(), false);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }
+
+    IEnumerator unloadScene(string sceneName)
+    {
+        player.GetComponent<TriggerTransition>().triggerTransition = true;
+        yield return new WaitForSeconds(1);
+        gameObject.GetComponent<ChangeSkybox>().ChangeTheSkybox();
+        Scene rootScene = SceneManager.GetSceneAt(0);
+        SceneManager.SetActiveScene(rootScene);
+        setGameObjectsStatus(rootScene.GetRootGameObjects(), true);
+        SceneManager.UnloadSceneAsync(sceneName);
     }
 }
 
