@@ -16,15 +16,14 @@ public class ChangeScene : MonoBehaviour
         Scene activeScene = SceneManager.GetActiveScene();
         setGameObjectsStatus(activeScene.GetRootGameObjects(), false);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneName));
     }
 
-    public void unloadScene()
+    public void unloadScene(string sceneName)
     {
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         Scene rootScene = SceneManager.GetSceneAt(0);
         SceneManager.SetActiveScene(rootScene);
         setGameObjectsStatus(rootScene.GetRootGameObjects(), true);
+        SceneManager.UnloadSceneAsync(sceneName);
     }
 
     public void setGameObjectsStatus(GameObject[] objects, bool status)
