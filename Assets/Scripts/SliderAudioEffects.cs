@@ -11,6 +11,9 @@ public class SliderAudioEffects : MonoBehaviour
     public float OldMaximumValue;
     public float NewMinimumValue;
     public float NewMaximumValue;
+    public GameObject lampe;
+    public Material lampeAn;
+    public Material lampeAus;
    // public AudioSource asourceL;
    // public AudioSource asourceR;
 
@@ -52,5 +55,28 @@ public class SliderAudioEffects : MonoBehaviour
 
         lautsprecherMixer.SetFloat(effectName, effectValue);
 
+        if (sliderValue > 0.501f)
+        {
+            turnLampOn();
+        }
+
+        else if (sliderValue < 0.501f)
+        {
+            turnLampOff();
+        }
+
     }
+
+    public void turnLampOn()
+    {
+        Renderer sliderRend = lampe.GetComponent<Renderer>();
+        sliderRend.material = lampeAn;
+    }
+
+    public void turnLampOff()
+    {
+        Renderer sliderRend = lampe.GetComponent<Renderer>();
+        sliderRend.material = lampeAus;
+    }
+
 }
