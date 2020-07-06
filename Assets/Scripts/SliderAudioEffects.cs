@@ -70,6 +70,29 @@ public class SliderAudioEffects : MonoBehaviour
 
     }
 
+
+    public void invertDryAndWetMix(float sliderValue)
+    {
+
+        float effectValue = scale(sliderValue);
+
+
+        lautsprecherMixer.SetFloat(effectName + "Wet", effectValue);
+        lautsprecherMixer.SetFloat(effectName + "Dry", -effectValue +1);
+
+        if (sliderValue > 0.501f)
+        {
+            turnLampOn();
+        }
+
+        else if (sliderValue < 0.501f)
+        {
+            turnLampOff();
+        }
+
+    }
+
+
     public void doEffectLog(float sliderValue)
     {
 
