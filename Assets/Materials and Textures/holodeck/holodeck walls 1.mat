@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: holodeck walls 1
-  m_Shader: {fileID: -6465566751694194690, guid: f651aaa2555394747b2b6c837fc100ae,
+  m_Shader: {fileID: -6465566751694194690, guid: 2c3bfabae26f16646beb32f68949ca14,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,8 +44,32 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_28FC3C09_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 8f550dcacc8f3184e8fdd303486d160d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_40AA8DEF_Texture_1:
+        m_Texture: {fileID: 2800000, guid: cabb4ebbdca41764a9cd324305e1cc55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_41C01EF2_Texture_1:
+        m_Texture: {fileID: 2800000, guid: cabb4ebbdca41764a9cd324305e1cc55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6BB8D856_Texture_1:
+        m_Texture: {fileID: 2800000, guid: e765bd77f24ddc841bd07a4dcb41c84f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_F75FCE41_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d317225765895ed4696d3a4456eb9b58, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_D51239F3_Out_0:
+        m_Texture: {fileID: 2800000, guid: e765bd77f24ddc841bd07a4dcb41c84f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -73,7 +97,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_A5BAA8AF: {r: 0, g: 1.7872279, b: 4.759381, a: 0}
+    - Color_A5BAA8AF: {r: 0.35966876, g: 0.12884323, b: 0, a: 0}
     - Vector2_912B45: {r: 20, g: 20, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
