@@ -75,6 +75,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-6417944593241584066
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Buttons
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 6edccbd5a206db74a84dfc4bdc56e76a
+  m_Children: []
+  m_Volume: 2c3b764fffbb7c74aba18cf21ad40f7b
+  m_Pitch: 2598c766a8aa00c4a9f5a04fbcaccb3b
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -6091110235992702618}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &-6306129044573300359
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -85,6 +104,20 @@ AudioMixerEffectController:
   m_EffectID: 907d338af83339a468af59b564b2b191
   m_EffectName: Attenuation
   m_MixLevel: 2a7e58ec94626b9449a96c3b13e402d2
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-6091110235992702618
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 1417f33fc2a045342b7da22b507f7a96
+  m_EffectName: Attenuation
+  m_MixLevel: fb6caa55ad374f4418de07a9e38edbfc
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -199,6 +232,7 @@ AudioMixerController:
     - e3267c8a6310ee645a0624c298cacd76
     - eb928b03938919045af47203d4368187
     - 12b02b9384f6eb949b6730b187b05de3
+    - 6edccbd5a206db74a84dfc4bdc56e76a
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -212,6 +246,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e3463de085295934bad32bd719f9f4af
   m_Children:
+  - {fileID: -6417944593241584066}
   - {fileID: 3593881893540560079}
   m_Volume: 3b46dd299e4894a4ab145ef2bb70d915
   m_Pitch: e464c5f00b8fa674c88683918dc02bfd
@@ -324,7 +359,7 @@ AudioMixerSnapshotController:
     c64dffe8837783a40b7ae7b648c73382: 200
     b4524f098883ca346928332b3015501d: 100
     a66dd5399ed5489429852629102157b2: 250
-    35a8bb4987dae5647b20cc0abc7e2d32: -80
+    35a8bb4987dae5647b20cc0abc7e2d32: 12.9
     5bd1fc4905a5ffc419210b38016dbb31: 0.533
     dc0c1c595f2204d41ba54ed4fb17dd85: 22000
     a3ae617964bf11c46b31546b75fed2db: 0.97
