@@ -48,7 +48,7 @@ public class SliderAudioEffects : MonoBehaviour
         return (NewValue);
     }
 
-
+    
 
 
     public void doEffect(float sliderValue)
@@ -89,6 +89,31 @@ public class SliderAudioEffects : MonoBehaviour
         }
 
     }
+
+
+
+    public void doSpeedChange(float sliderValue)
+    {
+
+        float effectValue = scale(sliderValue);
+
+        lautsprecherMixer.SetFloat("pitch", effectValue);
+        lautsprecherMixer.SetFloat("pitchCorrection", 1f / effectValue);
+
+
+
+        if (sliderValue > 0.501f)
+        {
+            turnLampOn();
+        }
+
+        else if (sliderValue < 0.501f)
+        {
+            turnLampOff();
+        }
+
+    }
+
 
     public void turnLampOn()
     {

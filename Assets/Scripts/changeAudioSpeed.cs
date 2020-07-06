@@ -21,7 +21,6 @@ public class changeAudioSpeed : MonoBehaviour
 
     public void changeSpeed(float newSpeed)
     {
-        
         asource.pitch = newSpeed*2;
         asource.outputAudioMixerGroup.audioMixer.SetFloat("Pitch", 1f / newSpeed);
     }
