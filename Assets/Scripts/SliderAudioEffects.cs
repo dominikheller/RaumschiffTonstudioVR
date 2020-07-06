@@ -13,23 +13,23 @@ public class SliderAudioEffects : MonoBehaviour
     public float NewMaximumValue;
     public GameObject lampe;
     public GameObject lampe2;
-    public GameObject lampe3; 
+    public GameObject lampe3;
     public GameObject lampe4;
     public Material lampeAn;
     public Material lampeAus;
-   // public AudioSource asourceL;
-   // public AudioSource asourceR;
+    // public AudioSource asourceL;
+    // public AudioSource asourceR;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
-    { 
-        
+    {
+
     }
 
 
@@ -48,7 +48,7 @@ public class SliderAudioEffects : MonoBehaviour
         return (NewValue);
     }
 
-    
+
 
 
     public void doEffect(float sliderValue)
@@ -78,7 +78,7 @@ public class SliderAudioEffects : MonoBehaviour
 
 
         lautsprecherMixer.SetFloat(effectName + "Wet", effectValue);
-        lautsprecherMixer.SetFloat(effectName + "Dry", -effectValue +1);
+        lautsprecherMixer.SetFloat(effectName + "Dry", -effectValue + 1);
 
         if (sliderValue > 0.501f)
         {
@@ -158,7 +158,7 @@ public class SliderAudioEffects : MonoBehaviour
     {
         Renderer sliderRend = lampe.GetComponent<Renderer>();
         sliderRend.material = lampeAus;
-        
+
 
         Renderer sliderRend2 = lampe2.GetComponent<Renderer>();
         sliderRend2.material = lampeAus;
