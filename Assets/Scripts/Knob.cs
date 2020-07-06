@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Knob : MonoBehaviour
 {
     public GameObject interactableContainer;
     public GameObject knobMeshRepresentation;
 
-    public string soundEffectTitle;
-    public float factor = 1;
-
     private bool currentlyGrabbed;
     private Vector3 initialInteractableContainerPosition;
+
+    public float audioEffectLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -21,16 +21,20 @@ public class Knob : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentlyGrabbed == true)
+        if (currentlyGrabbed == true)
         {
-            knobMeshRepresentation.transform.rotation = new Quaternion(0, interactableContainer.transform.rotation.y, 0, interactableContainer.transform.rotation.w);
-            GetComponent<SoundEffectController>().setSoundEffectLevel(soundEffectTitle, knobMeshRepresentation.transform.rotation.y, factor);
-            Debug.Log(knobMeshRepresentation.transform.rotation.y);
+            if(interactableContainer.transform.rotation.eulerAngles.y >= 0 && interactableContainer.transform.rotation.eulerAngles.y <= 180)
+            {
+                knobMeshRepresentation.transform.rotation = new Quaternion(0, interactableContainer.transform.rotation.y, 0, interactableContainer.transform.rotation.w);
+                audioEffectLevel = Mathf.Abs(knobMeshRepresentation.transform.rotation.y);
+                Debug.Log(audioEffectLevel);
+            }
         }
 
         if(currentlyGrabbed == false)
         {
             interactableContainer.transform.position = initialInteractableContainerPosition;
+            interactableContainer.transform.eulerAngles = new Vector3(0, Mathf.Abs(interactableContainer.transform.rotation.eulerAngles.y), 0);
         }
     }
 
