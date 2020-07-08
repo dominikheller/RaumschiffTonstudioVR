@@ -49,8 +49,7 @@ MonoBehaviour:
   m_ParameterInfo: []
   m_GraphVersion: 4
   m_saved: 1
-  m_SubgraphDependencies:
-  - {fileID: 5371698748595113096, guid: d4fde30bb85fc364ab2dac7059e7b8a4, type: 3}
+  m_SubgraphDependencies: []
   m_CategoryPath: 
 --- !u!2058629511 &8926484042661614527
 VisualEffectResource:
@@ -292,13 +291,9 @@ VisualEffectResource:
       position, float3 Up) /*mode:FixedAxis axes:ZY */\n\t\t\t{\n\t\t\t    \n\t\t\t   
       axisY = Up;\n\t\t\t    axisZ = position - GetViewVFXPosition();\n\t\t\t   
       axisX = normalize(cross(axisY,axisZ));\n\t\t\t    axisZ = cross(axisX,axisY);\n\t\t\t   
-      \n\t\t\t}\n\t\t\tvoid SetAttribute_FDD06EC7(inout float3 color, float3 Color)
-      /*attribute:color Composition:Overwrite Source:Slot Random:Off channels:XYZ
-      */\n\t\t\t{\n\t\t\t    color = Color;\n\t\t\t}\n\t\t\tvoid SetAttribute_CEEAF35C(inout
-      float alpha, float Alpha) /*attribute:alpha Composition:Overwrite Source:Slot
-      Random:Off channels:XYZ */\n\t\t\t{\n\t\t\t    alpha = Alpha;\n\t\t\t}\n\t\t\t\n\n\t\t\t\n\t\t\t#if
-      defined(HAS_STRIPS) && !defined(VFX_PRIMITIVE_QUAD)\n\t\t\t#error VFX_PRIMITIVE_QUAD
-      must be defined when HAS_STRIPS is.\n\t\t\t#endif\n\t\t\t\n\t\t\tstruct vs_input\n\t\t\t{\n\t\t\t\tVFX_DECLARE_INSTANCE_ID\n\t\t\t};\n\t\t\t\n\t\t\t#if
+      \n\t\t\t}\n\t\t\t\n\n\t\t\t\n\t\t\t#if defined(HAS_STRIPS) && !defined(VFX_PRIMITIVE_QUAD)\n\t\t\t#error
+      VFX_PRIMITIVE_QUAD must be defined when HAS_STRIPS is.\n\t\t\t#endif\n\t\t\t\n\t\t\tstruct
+      vs_input\n\t\t\t{\n\t\t\t\tVFX_DECLARE_INSTANCE_ID\n\t\t\t};\n\t\t\t\n\t\t\t#if
       HAS_STRIPS\n\t\t\t#define PARTICLE_IN_EDGE (id & 1)\n\t\t\t\n\t\t\tfloat3 GetParticlePosition(uint
       index)\n\t\t\t{\n\t\t\t\tstruct Attributes attributes = (Attributes)0;\n\t\t\t\tattributes.position
       = asfloat(attributeBuffer.Load3((index * 0x4 + 0x0) << 2));\n\t\t\t\t\n\n\t\t\t\treturn
@@ -355,9 +350,7 @@ VisualEffectResource:
       Initialize built-in needed attributes\n\t\t\t\t\t\t#if HAS_STRIPS\n\t\t\t\t\t\tInitStripAttributes(index,
       attributes, stripData);\n\t\t\t\t\t\t#endif\n\t\t\t\t\t\t\t\n\t\t\t\t{\n\t\t\t\t   
       Orient_7C5( /*inout */attributes.axisX,  /*inout */attributes.axisY,  /*inout
-      */attributes.axisZ, attributes.position, float3(0, 1, 0));\n\t\t\t\t}\n\t\t\t\t{\n\t\t\t\t   
-      SetAttribute_FDD06EC7( /*inout */attributes.color, float3(0, 131.269165, 205.511566));\n\t\t\t\t}\n\t\t\t\t{\n\t\t\t\t   
-      SetAttribute_CEEAF35C( /*inout */attributes.alpha, (float)0.0196078438);\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t#if
+      */attributes.axisZ, attributes.position, float3(0, 1, 0));\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t#if
       !HAS_STRIPS\n\t\t\t\tif (!attributes.alive)\n\t\t\t\t\treturn o;\n\t\t\t#endif\n\t\t\t\t\n\t\t\t#if
       VFX_PRIMITIVE_QUAD\n\t\t\t\n\t\t\t#if HAS_STRIPS\n\t\t\t#if VFX_STRIPS_UV_STRECHED\n\t\t\t\to.VFX_VARYING_UV.x
       = (float)(currentIndex) / (stripData.nextIndex - 1);\n\t\t\t#elif VFX_STRIPS_UV_PER_SEGMENT\n\t\t\t\to.VFX_VARYING_UV.x
@@ -486,13 +479,9 @@ VisualEffectResource:
       position, float3 Up) /*mode:FixedAxis axes:ZY */\n\t\t\t{\n\t\t\t    \n\t\t\t   
       axisY = Up;\n\t\t\t    axisZ = position - GetViewVFXPosition();\n\t\t\t   
       axisX = normalize(cross(axisY,axisZ));\n\t\t\t    axisZ = cross(axisX,axisY);\n\t\t\t   
-      \n\t\t\t}\n\t\t\tvoid SetAttribute_FDD06EC7(inout float3 color, float3 Color)
-      /*attribute:color Composition:Overwrite Source:Slot Random:Off channels:XYZ
-      */\n\t\t\t{\n\t\t\t    color = Color;\n\t\t\t}\n\t\t\tvoid SetAttribute_CEEAF35C(inout
-      float alpha, float Alpha) /*attribute:alpha Composition:Overwrite Source:Slot
-      Random:Off channels:XYZ */\n\t\t\t{\n\t\t\t    alpha = Alpha;\n\t\t\t}\n\t\t\t\n\n\t\t\t\n\t\t\t#if
-      defined(HAS_STRIPS) && !defined(VFX_PRIMITIVE_QUAD)\n\t\t\t#error VFX_PRIMITIVE_QUAD
-      must be defined when HAS_STRIPS is.\n\t\t\t#endif\n\t\t\t\n\t\t\tstruct vs_input\n\t\t\t{\n\t\t\t\tVFX_DECLARE_INSTANCE_ID\n\t\t\t};\n\t\t\t\n\t\t\t#if
+      \n\t\t\t}\n\t\t\t\n\n\t\t\t\n\t\t\t#if defined(HAS_STRIPS) && !defined(VFX_PRIMITIVE_QUAD)\n\t\t\t#error
+      VFX_PRIMITIVE_QUAD must be defined when HAS_STRIPS is.\n\t\t\t#endif\n\t\t\t\n\t\t\tstruct
+      vs_input\n\t\t\t{\n\t\t\t\tVFX_DECLARE_INSTANCE_ID\n\t\t\t};\n\t\t\t\n\t\t\t#if
       HAS_STRIPS\n\t\t\t#define PARTICLE_IN_EDGE (id & 1)\n\t\t\t\n\t\t\tfloat3 GetParticlePosition(uint
       index)\n\t\t\t{\n\t\t\t\tstruct Attributes attributes = (Attributes)0;\n\t\t\t\tattributes.position
       = asfloat(attributeBuffer.Load3((index * 0x4 + 0x0) << 2));\n\t\t\t\t\n\n\t\t\t\treturn
@@ -549,9 +538,7 @@ VisualEffectResource:
       Initialize built-in needed attributes\n\t\t\t\t\t\t#if HAS_STRIPS\n\t\t\t\t\t\tInitStripAttributes(index,
       attributes, stripData);\n\t\t\t\t\t\t#endif\n\t\t\t\t\t\t\t\n\t\t\t\t{\n\t\t\t\t   
       Orient_7C5( /*inout */attributes.axisX,  /*inout */attributes.axisY,  /*inout
-      */attributes.axisZ, attributes.position, float3(0, 1, 0));\n\t\t\t\t}\n\t\t\t\t{\n\t\t\t\t   
-      SetAttribute_FDD06EC7( /*inout */attributes.color, float3(0, 131.269165, 205.511566));\n\t\t\t\t}\n\t\t\t\t{\n\t\t\t\t   
-      SetAttribute_CEEAF35C( /*inout */attributes.alpha, (float)0.0196078438);\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t#if
+      */attributes.axisZ, attributes.position, float3(0, 1, 0));\n\t\t\t\t}\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t#if
       !HAS_STRIPS\n\t\t\t\tif (!attributes.alive)\n\t\t\t\t\treturn o;\n\t\t\t#endif\n\t\t\t\t\n\t\t\t#if
       VFX_PRIMITIVE_QUAD\n\t\t\t\n\t\t\t#if HAS_STRIPS\n\t\t\t#if VFX_STRIPS_UV_STRECHED\n\t\t\t\to.VFX_VARYING_UV.x
       = (float)(currentIndex) / (stripData.nextIndex - 1);\n\t\t\t#elif VFX_STRIPS_UV_PER_SEGMENT\n\t\t\t\to.VFX_VARYING_UV.x
@@ -759,21 +746,9 @@ VisualEffectResource:
         data[0]: -1
         data[1]: -1
         data[2]: -1
-        data[3]: 3
-      - op: 1
-        valueIndex: 23
-        data[0]: -1
-        data[1]: -1
-        data[2]: -1
-        data[3]: 1
-      - op: 1
-        valueIndex: 24
-        data[0]: -1
-        data[1]: -1
-        data[2]: -1
         data[3]: 7
       - op: 9
-        valueIndex: 25
+        valueIndex: 21
         data[0]: -1
         data[1]: -1
         data[2]: -1
@@ -790,8 +765,6 @@ VisualEffectResource:
           m_Value: 1
         - m_ExpressionIndex: 8
           m_Value: 0.1
-        - m_ExpressionIndex: 11
-          m_Value: 0.019607844
       m_Vector2f:
         m_Array: []
       m_Vector3f:
@@ -806,8 +779,6 @@ VisualEffectResource:
           m_Value: {x: 1, y: 1, z: 1}
         - m_ExpressionIndex: 6
           m_Value: {x: 0, y: 0, z: 0}
-        - m_ExpressionIndex: 10
-          m_Value: {x: 0, y: 131.26917, z: 205.51157}
       m_Vector4f:
         m_Array: []
       m_Uint:
@@ -823,9 +794,8 @@ VisualEffectResource:
       m_NamedObject:
         m_Array:
         - m_ExpressionIndex: 3
-          m_Value: {fileID: 6918954641851045129, guid: 8a65d6c5464595b4dabb8c9604955b28,
-            type: 3}
-        - m_ExpressionIndex: 12
+          m_Value: {fileID: 2800000, guid: 1d8481de16af723418a688958c41224b, type: 3}
+        - m_ExpressionIndex: 10
           m_Value: {fileID: 0}
       m_Bool:
         m_Array: []
@@ -1046,7 +1016,7 @@ VisualEffectResource:
       temporaryBuffers: []
       values:
       - nameId: localToWorld
-        index: 13
+        index: 11
       params: []
       processor: {fileID: 0}
       shaderSourceIndex: 3
@@ -1061,7 +1031,7 @@ VisualEffectResource:
       temporaryBuffers: []
       values:
       - nameId: mainTexture
-        index: 12
+        index: 10
       params:
       - nameId: sortPriority
         index: 0
@@ -2657,114 +2627,8 @@ MonoBehaviour:
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
-  m_OutputSlots:
-  - {fileID: 8926484042661614919}
-  - {fileID: 8926484042661614920}
-  - {fileID: 8926484042661614921}
+  m_OutputSlots: []
   Asset: {fileID: -3256353808211938606, guid: 8a65d6c5464595b4dabb8c9604955b28, type: 3}
---- !u!114 &8926484042661614919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52d920e7fff73b498050a6b3c4404ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 0}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614919}
-  m_MasterData:
-    m_Owner: {fileID: 8926484042661614918}
-    m_Value:
-      m_Type:
-        m_SerializableType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: Point Count
-    m_serializedType:
-      m_SerializableType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-    attributes: []
-  m_Direction: 1
-  m_LinkedSlots: []
---- !u!114 &8926484042661614920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a331b1d86cc8d4aa106ccbe0da5852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 0}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614920}
-  m_MasterData:
-    m_Owner: {fileID: 8926484042661614918}
-    m_Value:
-      m_Type:
-        m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: 'AttributeMap : position'
-    m_serializedType:
-      m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    attributes: []
-  m_Direction: 1
-  m_LinkedSlots:
-  - {fileID: 8926484042661614946}
---- !u!114 &8926484042661614921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a331b1d86cc8d4aa106ccbe0da5852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 0}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661614921}
-  m_MasterData:
-    m_Owner: {fileID: 8926484042661614918}
-    m_Value:
-      m_Type:
-        m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: 'AttributeMap : normal'
-    m_serializedType:
-      m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    attributes: []
-  m_Direction: 1
-  m_LinkedSlots: []
 --- !u!114 &8926484042661614922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3145,8 +3009,7 @@ MonoBehaviour:
       m_Regex: 
       m_RegexMaxLength: 0
   m_Direction: 0
-  m_LinkedSlots:
-  - {fileID: 8926484042661614920}
+  m_LinkedSlots: []
 --- !u!114 &8926484042661614998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,188 +3213,11 @@ MonoBehaviour:
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
-  m_InputSlots:
-  - {fileID: 8926484042661615004}
+  m_InputSlots: []
   m_OutputSlots: []
   m_Disabled: 0
   m_Subgraph: {fileID: 5371698748595113096, guid: d4fde30bb85fc364ab2dac7059e7b8a4,
     type: 3}
---- !u!114 &8926484042661615004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82227d5759e296488798b1554a72a15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 0}
-  m_Children:
-  - {fileID: 8926484042661615005}
-  - {fileID: 8926484042661615006}
-  - {fileID: 8926484042661615007}
-  - {fileID: 8926484042661615008}
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615004}
-  m_MasterData:
-    m_Owner: {fileID: 8926484042661615003}
-    m_Value:
-      m_Type:
-        m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.0,"g":131.2691650390625,"b":205.51156616210938,"a":0.019607843831181527}'
-    m_Space: 2147483647
-  m_Property:
-    name: Color
-    m_serializedType:
-      m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    attributes:
-    - m_Type: 3
-      m_Min: -Infinity
-      m_Max: Infinity
-      m_Tooltip: Input Color and Alpha
-      m_Regex: 
-      m_RegexMaxLength: 0
-  m_Direction: 0
-  m_LinkedSlots: []
---- !u!114 &8926484042661615005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 8926484042661615004}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615004}
-  m_MasterData:
-    m_Owner: {fileID: 0}
-    m_Value:
-      m_Type:
-        m_SerializableType: 
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: r
-    m_serializedType:
-      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-    attributes: []
-  m_Direction: 0
-  m_LinkedSlots: []
---- !u!114 &8926484042661615006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 8926484042661615004}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615004}
-  m_MasterData:
-    m_Owner: {fileID: 0}
-    m_Value:
-      m_Type:
-        m_SerializableType: 
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: g
-    m_serializedType:
-      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-    attributes: []
-  m_Direction: 0
-  m_LinkedSlots: []
---- !u!114 &8926484042661615007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 8926484042661615004}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615004}
-  m_MasterData:
-    m_Owner: {fileID: 0}
-    m_Value:
-      m_Type:
-        m_SerializableType: 
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: b
-    m_serializedType:
-      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-    attributes: []
-  m_Direction: 0
-  m_LinkedSlots: []
---- !u!114 &8926484042661615008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Parent: {fileID: 8926484042661615004}
-  m_Children: []
-  m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
-  m_UISuperCollapsed: 0
-  m_MasterSlot: {fileID: 8926484042661615004}
-  m_MasterData:
-    m_Owner: {fileID: 0}
-    m_Value:
-      m_Type:
-        m_SerializableType: 
-      m_SerializableObject: 
-    m_Space: 2147483647
-  m_Property:
-    name: a
-    m_serializedType:
-      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-    attributes: []
-  m_Direction: 0
-  m_LinkedSlots: []
 --- !u!114 &8926484042661615011
 MonoBehaviour:
   m_ObjectHideFlags: 0
