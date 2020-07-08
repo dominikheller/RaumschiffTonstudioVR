@@ -26,7 +26,7 @@ public class bowlingball : MonoBehaviour
         {
             if(!rotationSound.isPlaying && isGrounded == true)
             {
-                rotationSound.Play();
+                rotationSound.Play(1);
                 //changeAudioVolume();
                 //changeAudioSpeed(2);
             }
@@ -49,7 +49,7 @@ public class bowlingball : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
-        collisionSound.Play();
+        collisionSound.Play(0);
     }
 
     private void OnCollisionExit(Collision collision)
