@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!243 &-7968584611000011980
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bowlingball
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: a9242a66435947d418f0bdd7da74d4fb
+  m_Children: []
+  m_Volume: d05bc6b90a8dfc242814d384483265e2
+  m_Pitch: 86d7f9770eb6a154f967ef76c95b910f
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: 6725617885642738294}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &-7405035713495277332
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -10,6 +29,20 @@ AudioMixerEffectController:
   m_EffectID: b6357259d8920894ba569e9ca0c8d86c
   m_EffectName: Attenuation
   m_MixLevel: 6e030afe8556cd044bc60897313ea59c
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-7305277578610037428
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: c6f5cfb8ee00c694e931754a313c059c
+  m_EffectName: Attenuation
+  m_MixLevel: 8bdd0549337b5854a9f6aef2d624dfc1
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -53,6 +86,8 @@ AudioMixerController:
   - guids:
     - b998c64b266bcb54c9e311790a1969f9
     - a46b9188a6bf50743bdb8169f27d8d0c
+    - a9242a66435947d418f0bdd7da74d4fb
+    - 063575f17a8803147a43a159a36e5408
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -67,6 +102,8 @@ AudioMixerGroupController:
   m_GroupID: b998c64b266bcb54c9e311790a1969f9
   m_Children:
   - {fileID: -2134271445737434207}
+  - {fileID: 8408945687148070948}
+  - {fileID: -7968584611000011980}
   m_Volume: 58e822732b182474cbfbcc4674801ecd
   m_Pitch: 7bff2cdd4cf22ed40aeae0cff5e257af
   m_Send: 00000000000000000000000000000000
@@ -100,6 +137,41 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: a6101be1b3abd7b4db7a4d1db06b8c1c
   m_FloatValues:
+    620ac6d0e10ecd4428d5fce2a60b4239: 0
     58e822732b182474cbfbcc4674801ecd: 4
     37b71cc8e51f1ab42a0077b4cc77cf2e: 10
+    d05bc6b90a8dfc242814d384483265e2: 10
   m_TransitionOverrides: {}
+--- !u!244 &6725617885642738294
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d2021dc17c5c3f947819eb3b7a8fabc0
+  m_EffectName: Attenuation
+  m_MixLevel: d4d3e417f05a7384e807909dce63cc2d
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!243 &8408945687148070948
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bowlingpin
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 063575f17a8803147a43a159a36e5408
+  m_Children: []
+  m_Volume: 620ac6d0e10ecd4428d5fce2a60b4239
+  m_Pitch: 9b6440ee1afc51f409c43b60e19bee8c
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7305277578610037428}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
