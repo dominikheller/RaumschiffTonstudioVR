@@ -7,7 +7,6 @@ public class SynthwaveToggle : MonoBehaviour
 
     public Material skyboxToChangeTo; 
     public Material skyboxDefault;
-    public bool synthOn = false;
     public GameObject synthScape;
     public AudioClip clipL;
     public AudioClip clipR;
@@ -27,7 +26,7 @@ public class SynthwaveToggle : MonoBehaviour
         
     }
 
-    public void toggleSynthwave()
+    public void activateSynthwave()
     {
         audiosourceL.clip = clipL;
         audiosourceR.clip = clipR;
@@ -36,40 +35,52 @@ public class SynthwaveToggle : MonoBehaviour
 
         transitionAnimator.Play("TransitionPlane");
 
-        StartCoroutine(waitForTransition());
+        StartCoroutine(waitForTransitionToOn());
 
         }
 
-    IEnumerator waitForTransition()
+
+    public void deactivateSynthwave()
+    {
+        
+
+        transitionAnimator.Play("TransitionPlane");
+
+        StartCoroutine(waitForTransitionToOff());
+
+    }
+
+
+    IEnumerator waitForTransitionToOn()
     {
         yield return new WaitForSeconds(0.5f);
 
-        if (synthOn == false)
-        {
+
             RenderSettings.skybox = skyboxToChangeTo;
             synthScape.SetActive(true);
 
             
 
-            synthOn = true;
+    }
 
-        }
 
-        else if (synthOn == true)
-        {
+    IEnumerator waitForTransitionToOff()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        
 
             RenderSettings.skybox = skyboxDefault;
             synthScape.SetActive(false);
 
             audiosourceL.Stop();
             audiosourceR.Stop();
+            audiosourceL.clip = null;
+            audiosourceR.clip = null;
 
-            synthOn = false;
 
-        }
-
+        
     }
-
 
 
 }
