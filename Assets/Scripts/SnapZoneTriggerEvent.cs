@@ -6,14 +6,13 @@ public class SnapZoneTriggerEvent : MonoBehaviour
 {
     public string cardridgeTitle;
 
-    private void OnCollisionEnter(Collision collision)
+    public void cartridgeSnapped(GameObject snappedCartridge)
     {
-        cardridgeTitle = collision.transform.name;
-        gameObject.GetComponent<BoxCollider>().size = new Vector3(0, -.5f, 0);
+        cardridgeTitle = snappedCartridge.name;
     }
 
-    private void OnCollisionExit(Collision collision)
+    public void cartridgeUnsnapped()
     {
-        gameObject.GetComponent<BoxCollider>().size = new Vector3(0, -.5f, 9.5f);
+        cardridgeTitle = "";
     }
 }
