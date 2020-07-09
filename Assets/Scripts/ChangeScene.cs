@@ -5,25 +5,50 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     private GameObject player;
+    private GameObject cartridgeTriggerEvent;
+    private string nextSceneTitle = "";
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        cartridgeTriggerEvent = GameObject.FindGameObjectWithTag("CartridgeTriggerEvent");
     }
 
-    public void changeSceneTo(string sceneName)
+    private void Update()
     {
-        SceneManager.LoadScene(sceneName);
+        if (cartridgeTriggerEvent.GetComponent<SnapZoneTriggerEvent>().cardridgeTitle != "")
+        {
+            nextSceneTitle = cartridgeTriggerEvent.GetComponent<SnapZoneTriggerEvent>().cardridgeTitle;
+        }
     }
 
-    public void initChangeSceneAdditive(string sceneName)
+    public void initLevelChange()
     {
-        StartCoroutine(changeSceneAdditive(sceneName));
+        StartCoroutine(changeSceneTo());
     }
 
-    public void initUnloadScene(string sceneName)
+    IEnumerator changeSceneTo()
     {
-        StartCoroutine(unloadScene(sceneName));
+        if (nextSceneTitle != "")
+        {
+            player.GetComponent<TriggerTransition>().triggerTransition = true;
+            gameObject.GetComponent<AudioSource>().Play(0);
+            yield return new WaitForSeconds(4);
+            SceneManager.LoadScene(nextSceneTitle);
+        }
+    }
+
+    public void initChangeSceneAdditive()
+    {
+        if(nextSceneTitle != "")
+        {
+            StartCoroutine(changeSceneAdditive());
+        }
+    }
+
+    public void initUnloadScene()
+    {
+        StartCoroutine(unloadScene());
     }
 
     public void setGameObjectsStatus(GameObject[] objects, bool status)
@@ -34,17 +59,17 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    IEnumerator changeSceneAdditive(string sceneName)
+    IEnumerator changeSceneAdditive()
     {
         player.GetComponent<TriggerTransition>().triggerTransition = true;
         yield return new WaitForSeconds(1);
         gameObject.GetComponent<ChangeSkybox>().ChangeTheSkybox();
         Scene activeScene = SceneManager.GetActiveScene();
         setGameObjectsStatus(activeScene.GetRootGameObjects(), false);
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+        SceneManager.LoadScene(nextSceneTitle, LoadSceneMode.Additive);
     }
 
-    IEnumerator unloadScene(string sceneName)
+    IEnumerator unloadScene()
     {
         player.GetComponent<TriggerTransition>().triggerTransition = true;
         yield return new WaitForSeconds(1);
@@ -52,7 +77,7 @@ public class ChangeScene : MonoBehaviour
         Scene rootScene = SceneManager.GetSceneAt(0);
         SceneManager.SetActiveScene(rootScene);
         setGameObjectsStatus(rootScene.GetRootGameObjects(), true);
-        SceneManager.UnloadSceneAsync(sceneName);
+        SceneManager.UnloadSceneAsync(nextSceneTitle);
     }
 }
 

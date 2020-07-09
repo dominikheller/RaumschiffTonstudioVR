@@ -12,6 +12,7 @@ TagManager:
   - Platform
   - leftControllerAlias
   - rightControllerAlias
+  - CartridgeTriggerEvent
   layers:
   - Default
   - TransparentFX
