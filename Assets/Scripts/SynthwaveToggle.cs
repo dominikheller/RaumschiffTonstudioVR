@@ -28,10 +28,10 @@ public class SynthwaveToggle : MonoBehaviour
 
     public void activateSynthwave()
     {
-        audiosourceL.clip = clipL;
-        audiosourceR.clip = clipR;
-        audiosourceL.PlayDelayed(0.7f);
-        audiosourceR.PlayDelayed(0.7f);
+       // audiosourceL.clip = clipL;
+      //  audiosourceR.clip = clipR;
+      //  audiosourceL.PlayDelayed(0.7f);
+     //   audiosourceR.PlayDelayed(0.7f);
 
         transitionAnimator.Play("TransitionPlane");
 
@@ -73,10 +73,10 @@ public class SynthwaveToggle : MonoBehaviour
             RenderSettings.skybox = skyboxDefault;
             synthScape.SetActive(false);
 
-            audiosourceL.Stop();
-            audiosourceR.Stop();
-            audiosourceL.clip = null;
-            audiosourceR.clip = null;
+         //   audiosourceL.Stop();
+         //   audiosourceR.Stop();
+         //   audiosourceL.clip = null;
+         //   audiosourceR.clip = null;
 
 
         
