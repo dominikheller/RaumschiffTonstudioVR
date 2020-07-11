@@ -77,6 +77,8 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 125215441026964393}
+  - {fileID: 3833721013159683305}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -90,7 +92,7 @@ AudioMixerController:
     - 063575f17a8803147a43a159a36e5408
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 125215441026964393}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -137,9 +139,39 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: a6101be1b3abd7b4db7a4d1db06b8c1c
   m_FloatValues:
+    620ac6d0e10ecd4428d5fce2a60b4239: -80
+    58e822732b182474cbfbcc4674801ecd: 4
+    37b71cc8e51f1ab42a0077b4cc77cf2e: -6
+    d05bc6b90a8dfc242814d384483265e2: -80
+  m_TransitionOverrides: {}
+--- !u!245 &125215441026964393
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Arcade Mute Beginning
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 6ba6e7197527abb44acfc06905816584
+  m_FloatValues:
+    620ac6d0e10ecd4428d5fce2a60b4239: -80
+    58e822732b182474cbfbcc4674801ecd: 4
+    37b71cc8e51f1ab42a0077b4cc77cf2e: -6
+    d05bc6b90a8dfc242814d384483265e2: -80
+  m_TransitionOverrides: {}
+--- !u!245 &3833721013159683305
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Arcade Normal
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 98ce5198c78139d458694cbeeae2a28a
+  m_FloatValues:
     620ac6d0e10ecd4428d5fce2a60b4239: -3
     58e822732b182474cbfbcc4674801ecd: 4
-    37b71cc8e51f1ab42a0077b4cc77cf2e: 10
+    37b71cc8e51f1ab42a0077b4cc77cf2e: -6
     d05bc6b90a8dfc242814d384483265e2: -1
   m_TransitionOverrides: {}
 --- !u!244 &6725617885642738294
