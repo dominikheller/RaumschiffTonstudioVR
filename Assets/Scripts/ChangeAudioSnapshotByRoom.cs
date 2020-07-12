@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class ToggleNoiseCancelling : MonoBehaviour
+public class ChangeAudioSnapshotByRoom : MonoBehaviour
 {
-    public bool on = false;
-    public AudioMixerSnapshot ncOn;
-    public AudioMixerSnapshot ncOff;
+
+    public float transitionLength;
+    public AudioMixerSnapshot snapshot;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        
+
 
 
 
@@ -22,26 +22,20 @@ public class ToggleNoiseCancelling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void toggleNc()
+    void OnTriggerEnter(Collider other)
     {
-
-        if (on == false)
+        if (other.tag == "Player")
         {
-            ncOn.TransitionTo(3);
-            on = true;
+
+            snapshot.TransitionTo(transitionLength);
+
         }
 
-        if (on == true)
-        {
-            ncOff.TransitionTo(3);
-            on = false;
-        }
 
     }
-
 
 
 }
