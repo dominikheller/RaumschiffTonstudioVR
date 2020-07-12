@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CancelSimulationYes : MonoBehaviour
 {
 
+    public GameObject player;
 
     public GameObject confirmPanel;
     
@@ -27,13 +29,14 @@ public class CancelSimulationYes : MonoBehaviour
     {
         if (other.tag == "OtherHand")
         {
-            confirmPanel.SetActive(false);
-
-            //change the level back to spaceship script here
-        
+            StartCoroutine(initLevelChange());
         }
+       }
 
-
-        }
-
+    IEnumerator initLevelChange()
+    {
+        player.GetComponent<TriggerTransition>().triggerTransition = true;
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("RaumschiffRedesign");
+    }
 }

@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    public Animator holodeckAnim;
+
     private GameObject player;
     private GameObject cartridgeTriggerEvent;
     private string nextSceneTitle = "";
@@ -31,8 +33,9 @@ public class ChangeScene : MonoBehaviour
     {
         if (nextSceneTitle != "")
         {
-            player.GetComponent<TriggerTransition>().triggerTransition = true;
+            holodeckAnim.Play("holodeckAn");
             gameObject.GetComponent<AudioSource>().Play(0);
+            player.GetComponent<TriggerTransition>().triggerTransition = true;
             yield return new WaitForSeconds(4);
             SceneManager.LoadScene(nextSceneTitle);
         }
