@@ -13,6 +13,7 @@ TagManager:
   - leftControllerAlias
   - rightControllerAlias
   - CartridgeTriggerEvent
+  - OtherHand
   layers:
   - Default
   - TransparentFX
