@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class ChangeAudioSnapshotByRoom : MonoBehaviour
+public class ToggleNoiseCancelling : MonoBehaviour
 {
-
-    public float transitionLength;
-    public AudioMixerSnapshot snapshot;
+   
+    public AudioMixerSnapshot ncOn;
+    
 
     // Start is called before the first frame update
     void Start()
     {
 
-        
+
 
 
 
@@ -22,20 +22,17 @@ public class ChangeAudioSnapshotByRoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnTriggerEnter(Collider other)
+    public void toggleNc()
     {
-        if (other.tag == "Player")
-        {
 
-            snapshot.TransitionTo(transitionLength);
-
-        }
-
-
+            ncOn.TransitionTo(3.0f);
+         
+  
     }
+
 
 
 }
