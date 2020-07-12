@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: af7d6654cf9480e4a8142fd454859a75,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2352,6 +2352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023949092299002945, guid: 8591f2643098bf349ac732cbcf7e164f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8591f2643098bf349ac732cbcf7e164f, type: 3}
@@ -10043,9 +10048,9 @@ MonoBehaviour:
   enableSpatialization: 1
   gain: 0
   useInvSqr: 1
-  near: 0.25
+  near: 5
   far: 250
-  volumetricRadius: 0
+  volumetricRadius: 8
   reverbSend: 0
   enableRfl: 0
 --- !u!82 &2003354224
