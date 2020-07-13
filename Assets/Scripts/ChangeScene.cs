@@ -22,6 +22,10 @@ public class ChangeScene : MonoBehaviour
         {
             nextSceneTitle = cartridgeTriggerEvent.GetComponent<SnapZoneTriggerEvent>().cardridgeTitle;
         }
+        else
+        {
+            nextSceneTitle = "";
+        }
     }
 
     public void initLevelChange()
