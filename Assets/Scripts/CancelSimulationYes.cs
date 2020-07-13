@@ -36,7 +36,7 @@ public class CancelSimulationYes : MonoBehaviour
     IEnumerator initLevelChange()
     {
         player.GetComponent<TriggerTransition>().triggerTransition = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("RaumschiffRedesign");
     }
 }
